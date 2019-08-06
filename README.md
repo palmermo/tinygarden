@@ -1,20 +1,12 @@
 # Final Project
 
-## TODO: Submit your wireframes in the form of a pull request
+## Wireframes
 
-This example wireframe lives in `readme_assets/wireframe_example.jpg`
+![Wireframe summary](https://user-images.githubusercontent.com/47954945/62427833-0f1fcc00-b6c7-11e9-9603-a7d45eb21705.png)
 
-Swap it out with your actual wireframes...
+## ERD
+...pending changes
 
-![Wireframe Example](readme_assets/wireframe_example.jpg)
-
-## TODO: Submit your ERD in the form of a pull request
-
-This example Entity Relational Diagram lives in `readme_assets/erd_example.png`
-
-![ERD Example](readme_assets/erd_example.png)
-
-Swap it out with your actual ERD...
 
 ## Deployment
 
