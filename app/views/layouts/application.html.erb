@@ -12,7 +12,7 @@
   <body>
     <nav id="navbar">
       <div>
-        
+        <%= link_to 'Logout', destroy_user_session_path, method: 'delete' if current_user %>
       </div>
     </nav>
     <%= yield %>
