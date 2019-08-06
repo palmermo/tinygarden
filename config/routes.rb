@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :products, only: [:show, :index] do 
     resources :plants, only: [:show, :index]
   end
+  
+  get 'hello_world', to: 'hello_world#index'
 end
