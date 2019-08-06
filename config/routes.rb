@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'static_pages#landing'
+  get 'users/show'
+  devise_for :users
+
+  resources :products, only: [:show, :index] do 
+    resources :plants, only: [:show, :index]
+  end
+  
   get 'hello_world', to: 'hello_world#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
