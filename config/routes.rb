@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#landing'
+  get '/oauth/callback', to: 'instagram#callback'
   get 'users/show'
   devise_for :users
 
