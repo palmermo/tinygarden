@@ -17,6 +17,8 @@
       <div>
         <ul>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: 'delete' if current_user %></li>
+          <li><%= link_to 'Edit', edit_user_registration_path if current_user %></li>
           <li><%= link_to 'Log In', new_user_session_path %></li>
           <li><%= link_to 'Home', root_path %></li>
         </ul>
