@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'design_pages/index'
+  get 'care_pages/index'
   root 'static_pages#landing'
   get 'users/show'
   devise_for :users

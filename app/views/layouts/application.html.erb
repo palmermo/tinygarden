@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -14,22 +15,28 @@
       <div id="inner-nav">
         <ul>
           <li><%= link_to "Shop", products_path %></li>
+          <li><%= link_to "Care", care_pages_index_path %></li>
+          <li><%= link_to "Design", design_pages_index_path %></li>
         </ul>
         <ul>
-          <li><%= link_to 'Tiny Garden', root_path %></li>
+          <li class="animated bounce"><%= link_to 'Tiny Garden', root_path %></li>
         </ul>
-        <div class="dropdown" id="loginBox-position">
-          <span><%= current_user ? current_user.email : "Login" %></span>
-          <div class="dropdown-content">
-          <%= link_to 'My Page', users_show_path if current_user %>
-          <%= link_to 'Logout', destroy_user_session_path, method: 'delete' if current_user %>
-          <%= link_to 'Edit', edit_user_registration_path if current_user %>
-          <%= link_to 'Log In', new_user_session_path unless current_user %>
-          <%= link_to 'Sign Up', new_user_registration_path unless current_user %>
+        <div class="right-side-nav">
+          <div class="dropdown" id="loginBox-position">
+            <a href="#" id="drop-styles"><%= current_user ? "Account" : "Login" %></a>
+            <div class="dropdown-content">
+              <%= link_to 'My Page', users_show_path if current_user %>
+              <%= link_to 'Logout', destroy_user_session_path, method: 'delete' if current_user %>
+              <%= link_to 'Edit', edit_user_registration_path if current_user %>
+              <%= link_to 'Log In', new_user_session_path unless current_user %>
+              <%= link_to 'Sign Up', new_user_registration_path unless current_user %>
+            </div>
           </div>
+          <span id="cart" ><%= link_to "Cart", root_path %></span>
         </div>
       </div>
     </nav>
+    <hr id="navspacer"/>
     <%= yield %>
   </body>
 </html>

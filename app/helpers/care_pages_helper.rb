@@ -1,0 +1,2 @@
+module CarePagesHelper
+end
