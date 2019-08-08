@@ -187,6 +187,10 @@ nav ul li a.current-page {
   transition: 0.3s;
 }
 
+.btnprimaryhome a:visited{
+  color: white;
+}
+
 .btnprimaryhome:hover{
   transform: scale(1.1);
   cursor: pointer;
