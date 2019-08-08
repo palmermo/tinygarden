@@ -275,3 +275,41 @@ z-index: 5;
   flex-wrap: wrap;
   margin: 40px;
 }
+
+/* ----------------- Global Footer ----------------- */
+
+#general-footer .box{
+  grid-template-columns: 2fr 1fr;
+  display: grid;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(28,81,81);
+  color: white;
+}
+
+#general-footer .footer-left{
+  margin: auto 10%;
+  padding: 15px 0;
+}
+
+#general-footer .footer-left h2{
+  font-family: 'Source Serif Pro', serif;
+}
+
+#general-footer .footer-left p{
+  margin-block-start: 0px;
+  margin-block-end: 15px;
+}
+
+#general-footer img{
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#general-footer .footer-right{
+  margin: auto 10%;
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
