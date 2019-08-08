@@ -1,6 +1,14 @@
-Plant.destroy_all
+User.destroy_all
 
-# ipsum = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu"
+user = User.create(
+  name: "izzy", email: "izzy@email.com", password: "password"
+)
+
+Cart.create(
+  user_id: user.id
+)
+
+Plant.destroy_all
 
 Plant.create([
   {name: "Peppermint", size: 1,light: 3, maintenance: 1, category: 1, description: "#"},
@@ -29,3 +37,5 @@ Product.create([
   {sku: "pot9", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Pothos').id },
   {sku: "mon10", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Monstera').id }
 ])
+
+Product.all.sample(5).each {|p| user.cart.products << p }
