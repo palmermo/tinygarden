@@ -14,9 +14,9 @@
     <nav id="navbar">
       <div id="inner-nav">
         <ul>
-          <li><%= link_to "Shop", products_path %></li>
-          <li><%= link_to "Care", care_pages_index_path %></li>
-          <li><%= link_to "Design", design_pages_index_path %></li>
+          <li><%= link_to "Shop", products_path, class: params[:action] == 'shop' ? 'nav-active' : ''  %></li>
+          <li><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
+          <li><%= link_to "Design", design_path, class: params[:action] == 'design' ? 'nav-active' : '' %></li>
         </ul>
         <ul>
           <li class="animated bounce"><%= link_to 'Tiny Garden', root_path %></li>
@@ -25,18 +25,34 @@
           <div class="dropdown" id="loginBox-position">
             <a href="#" id="drop-styles"><%= current_user ? "Account" : "Login" %></a>
             <div class="dropdown-content">
-              <%= link_to 'My Page', users_show_path if current_user %>
-              <%= link_to 'Logout', destroy_user_session_path, method: 'delete' if current_user %>
-              <%= link_to 'Edit', edit_user_registration_path if current_user %>
-              <%= link_to 'Log In', new_user_session_path unless current_user %>
-              <%= link_to 'Sign Up', new_user_registration_path unless current_user %>
+              <%= link_to('My Page', users_show_path, class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user %>
+              <%= link_to('Logout', 
+                destroy_user_session_path, 
+                method: 'delete', 
+                class: ('nav-active' if params[:action] == 'destroy' && params[:controller] == 'devise/registrations')) if current_user
+              %>
+              <%= link_to('Edit', 
+                edit_user_registration_path, 
+                class: ('nav-active' if params[:action] == 'edit' && params[:controller] == 'devise/registrations')) if current_user
+              %>
+              <%= link_to('Log In', 
+                new_user_session_path, 
+                class: ('nav-active' if params[:action] == 'new' && params[:controller] == 'devise/sessions')) unless current_user 
+              %>
+              <%= link_to('Sign Up', 
+                new_user_registration_path, 
+                class: ('nav-active' if params[:action] == 'new' && params[:controller] == 'devise/registrations')) unless current_user
+              %>
             </div>
           </div>
           <span id="cart" ><%= link_to "Cart", root_path %></span>
         </div>
       </div>
     </nav>
-    <hr id="navspacer"/>
-    <%= yield %>
+
+    <div id="main">
+    <%= params.to_s %>
+      <%= yield %>
+    </div>
   </body>
 </html>

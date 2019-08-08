@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'design_pages/index'
-  get 'care_pages/index'
   root 'static_pages#landing'
   get 'users/show'
+  get '/design', to: 'static_pages#design', as: 'design'
+  get '/care', to: 'static_pages#care', as: 'care'
   devise_for :users
 
   resources :products, only: [:show, :index] do 
