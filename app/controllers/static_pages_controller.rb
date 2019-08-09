@@ -10,13 +10,14 @@ class StaticPagesController < ApplicationController
   end
 
   def cart
-    @product = Product.all
+    # render component: 'FirstComponent', props: { name: 'Jhon' }
+    @cart_products = current_user.cart.products
+    # @cart_props = { products: @user_cart }
     
-    if current_user
-      @user_cart = current_user.cart.products
-    else
-      redirect_to root_path
-    end
+    # if current_user
+    # else
+    #   redirect_to root_path
+    # end
   end
   
 end
