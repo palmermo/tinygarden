@@ -86,9 +86,20 @@
         <div></div>
       </div>
 
-      <div>
+      <div id="insta-bgd">
+
+      <div id="showoff">
+       <p> Show off your tiny garden</p>
+     </div>
+
+      <div class="instafeed">
         <% @insta_feed.each do |image| %>
-          <%= image_tag image.images.thumbnail.url %>
+          <%= image_tag image.images.thumbnail.url%>
         <% end %>
-        things
-      <div>
+      </div>
+
+      <div id="mytinygdn">
+      <p> #mytinygarden </p>
+      </div>
+
+      </div>
