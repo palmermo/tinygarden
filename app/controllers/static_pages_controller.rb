@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :login_instagram, only: :landing
+  before_action :login_instagram, only: [:landing]
 
   def landing
     @plants = Plant.all
