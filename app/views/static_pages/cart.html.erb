@@ -1,0 +1,7 @@
+<%= react_component 'Cart' %>
+
+<h1>Cart</h1>
+
+<% @user_cart.each do |item| %>
+  <h1><%= item.sku %></h1>
+<% end %>

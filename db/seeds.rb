@@ -1,5 +1,3 @@
-User.destroy_all
-
 user = User.create(
   name: "izzy", email: "izzy@email.com", password: "password"
 )
