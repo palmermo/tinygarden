@@ -9,11 +9,9 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.handleResize)
-}
-
-  componentWillUnmount() {
-      window.removeEventListener('resize', this.handleResize)
+    let subtotal = 0
+    this.state.cartItems.forEach(p => (subtotal += p.price / 100) )
+    this.setState({ subtotal })
   }
 
   render() {
