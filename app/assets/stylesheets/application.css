@@ -42,13 +42,13 @@ button{font-family: 'Lato', sans-serif; font-weight: bold;}
 /* ----------------- NAVBAR ----------------- */
 
 #navbar {
-  height: 7rem;
-  /* background-color: transparent; */
+  height: 10%;
 }
 
 #inner-nav {
-  height: 7rem;
-  margin-left: -83px;
+  height: 100%;
+  width: 95%;
+  padding-right: 2%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -65,12 +65,13 @@ nav li {
   vertical-align: middle;
 }
 a:hover, a:focus, a:active {
-  color: #999;
+  color: #999 !important;
   text-decoration: none;
 }
 a {
-  text-decoration: none;
   transition: color 0.1s, background-color 0.1s;
+  text-decoration: none !important;
+  color: black !important;
 }
 a {
   position: relative;
@@ -97,6 +98,7 @@ a::before {
   transition: color 0.1s,transform 0.2s ease-out;
 }
 a.nav-active::before {
+  text-decoration: none;
   content: '';
   display: block;
   position: absolute;
@@ -133,6 +135,7 @@ a:hover::before, a:focus::before {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   line-height: 2rem;
+  font-size: small;
   z-index: 1;
   top: 2.7rem;
   right: 0rem;
@@ -158,10 +161,6 @@ nav {
   z-index: 3;
 }
 
-nav ul li a.current-page {
-  background-color: cornflowerblue;
-}
-
 #cart {
   margin-left: 2rem;
 }
@@ -170,9 +169,8 @@ nav ul li a.current-page {
   margin-top: 2.3rem;
 }
 /* ----------------- Main ----------------- */
-#main {
-  margin-top: 6rem;
-}
+
+
 /* ----------------- Home Welcome Block ----------------- */
 
 #welcome h1{
@@ -185,9 +183,11 @@ nav ul li a.current-page {
   align-items: center;
   text-align: center;
   margin: auto;
-  }
+}
+  
   
 .lightgreybackground {
+  padding-top: 4%;
   background-color: rgb(241, 240, 240);
 }
 
@@ -207,7 +207,7 @@ nav ul li a.current-page {
 }
 
 .btnprimaryhome a:visited{
-  color: white;
+  color: white !important;
 }
 
 .btnprimaryhome:hover{
@@ -280,6 +280,12 @@ z-index: 5;
 }
 
 /* ----------------- Global Footer ----------------- */
+
+#general-footer {
+  position: absolute;
+  width: 100%;
+}
+
 
 #general-footer .box{
   grid-template-columns: 2fr 1fr;
