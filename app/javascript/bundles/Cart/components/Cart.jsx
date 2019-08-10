@@ -16,10 +16,15 @@ class Cart extends Component {
 
   render() {
     return (
-      <div>
-        <Products items={this.state.cartItems}/>
-        <Summary summary={this.state.subtotal}/>
-      </div>
+      <>
+        <div id="cart-header">
+          <h1>Ready to check out?</h1>
+        </div>
+        <div id="cart-container" >
+          <Products items={this.state.cartItems}/>
+          <Summary summary={this.state.subtotal}/>
+        </div>
+      </>
     );
   }
 }

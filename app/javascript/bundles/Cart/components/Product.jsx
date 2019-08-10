@@ -17,14 +17,16 @@ class Product extends Component {
   render(){
     const { product } = this.state
     return (
-      <li>
-        <h2>{product.name}</h2>
+      <li className="product-container">
         {
           product.images.map ((image, i) => {
             return <img src={image} alt="wtf" key={i}/>
           })
         }
-        <p>{product.description}</p>
+        <div className="product-details">
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+        </div>
       </li>
     )
   }

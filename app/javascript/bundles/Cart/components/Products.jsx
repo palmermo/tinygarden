@@ -3,13 +3,20 @@ import Product from './Product'
 
 const Products = props => {
   return (
-    <ul>
-      {
-        props.items.map(item => {
-          return <Product key={item.sku} item={item} />
-        })
-      }
-    </ul>
+    <>
+      <ul id="products-container">
+        {
+          props.items.map((item, i) => {
+            return (
+              <div key={item.id}>
+                <Product key={item.sku} item={item} /> 
+                <hr key={i}/>
+              </div>
+            )
+          })
+        }
+      </ul>
+    </>
   )
 }
 
