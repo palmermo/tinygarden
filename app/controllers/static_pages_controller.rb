@@ -10,14 +10,7 @@ class StaticPagesController < ApplicationController
   end
 
   def cart
-    # render component: 'FirstComponent', props: { name: 'Jhon' }
-    @cart_products = current_user.cart.products
-    # @cart_props = { products: @user_cart }
-    
-    # if current_user
-    # else
-    #   redirect_to root_path
-    # end
+    @cart_items = User.find(1).cart.cart_products.map(&:to_json)
   end
   
 end

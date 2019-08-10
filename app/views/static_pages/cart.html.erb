@@ -1,8 +1,1 @@
-<%# <%= react_component("Cart", {@cart_props}) %> 
-
-<h1>Cart</h1>
-
-<% @cart_products.each do |item| %>
-  <h1><%= item.sku %></h1>
-<% end %>
-<%# <%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %> 
+<%= react_component 'Cart', props: { cartItems: @cart_items }, prerender: false %> 
