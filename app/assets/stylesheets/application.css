@@ -317,6 +317,12 @@ z-index: 5;
 
 /* ----------------- Global Footer ----------------- */
 
+#general-footer{
+  position: relative;
+  bottom:0;
+  width: 100%;
+}
+
 #general-footer .box{
   grid-template-columns: 2fr 1fr;
   display: grid;
