@@ -14,8 +14,16 @@
  *= require_self
  */
 
- body{
+body {
   margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
 }
 
 /* ----------------- Fonts ----------------- */
@@ -33,6 +41,116 @@ h6{font-size: 14px; margin-block-start: 0; margin-block-end: 0;}
 button{font-family: 'Lato', sans-serif; font-weight: bold;}
 /* ----------------- NAVBAR ----------------- */
 
+ol, ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+  padding: 20px 0 20px;
+  vertical-align: middle;
+}
+a:hover, a:focus, a:active {
+  color: #999;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s;
+}
+a {
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  line-height: 16px;
+  text-transform: uppercase;
+  transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+  color: #000;
+}
+a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s,transform 0.2s ease-out;
+}
+a.nav-active::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform: scale(1,1)
+}
+
+a:active::before {
+  background-color: #000;
+}
+a:hover::before, a:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+#navbar {
+  height: 6rem;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: text;
+}
+
+nav ul li a {
+  color:black;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  line-height: 2rem;
+  z-index: 1;
+  top: 2.7rem;
+  right: 0rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#inner-nav {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right-side-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 nav {
   background-color:rgb(241, 240, 240);
   position: fixed;
@@ -42,30 +160,20 @@ nav {
   z-index: 3;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style-type: none;
-}
-
-nav ul li a {
-  color:black;
-  padding: 15px;
-  display: block;
-  text-decoration: none;
-}
-
 nav ul li a.current-page {
   background-color: cornflowerblue;
 }
 
-nav ul li a:hover {
-  background-color: lightgrey;
+#cart {
+  margin-left: 2rem;
 }
 
-li{
-
+#navspacer {
+  margin-top: 2.3rem;
+}
+/* ----------------- Main ----------------- */
+#main {
+  margin-top: 6rem;
 }
 /* ----------------- Home Welcome Block ----------------- */
 
@@ -80,7 +188,7 @@ li{
   text-align: center;
   margin: auto;
   }
-  
+
   .lightgreybackground {
     background-color: rgb(241, 240, 240);
   }
@@ -98,6 +206,10 @@ li{
   font-size: 18px;
   margin: 60px;
   transition: 0.3s;
+}
+
+.btnprimaryhome a:visited{
+  color: white;
 }
 
 .btnprimaryhome:hover{
@@ -171,18 +283,18 @@ z-index: 5;
 /* ------------------------- Instagram Feed ---------------------- */
 
 #insta-bgd {
-  background-color: #EBF9F6; 
+  background-color: #EBF9F6;
 }
 #showoff {
   font-family: serif;
-  text-align: center; 
+  text-align: center;
   font-size: 1.5rem;
   padding:0.3rem;
 }
 .instafeed {
   display:flex;
   justify-content: center;
-} 
+}
 .instafeed img{
   height: 30vh;
   cursor: pointer;
@@ -195,9 +307,47 @@ z-index: 5;
 }
   #mytinygdn {
   font-family: serif;
-  text-align: center; 
+  text-align: center;
   font-size: 1.3rem;
   padding: 0.3rem;
   font-weight: lighter;
 }
 
+
+/* ----------------- Global Footer ----------------- */
+
+#general-footer .box{
+  grid-template-columns: 2fr 1fr;
+  display: grid;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(28,81,81);
+  color: white;
+}
+
+#general-footer .footer-left{
+  margin: auto 10%;
+  padding: 15px 0;
+}
+
+#general-footer .footer-left h2{
+  font-family: 'Source Serif Pro', serif;
+}
+
+#general-footer .footer-left p{
+  margin-block-start: 0px;
+  margin-block-end: 15px;
+}
+
+#general-footer img{
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#general-footer .footer-right{
+  margin: auto 10%;
+  display: inline-flex;
+  flex-direction: row-reverse;
+}

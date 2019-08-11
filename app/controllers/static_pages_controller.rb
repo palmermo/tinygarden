@@ -6,4 +6,10 @@ class StaticPagesController < ApplicationController
     @insta_feed = Instagram.client(:access_token => session[:access_token]).user_recent_media.shuffle.sample(4)
   end
 
+  def care
+  end
+
+  def design
+  end
+
 end
