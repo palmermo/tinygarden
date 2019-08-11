@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
   end
 
   def cart
-    @cart_items = User.find(1).cart.cart_products.map(&:to_json)
+    @cart_items = current_user.cart.cart_products.map(&:to_json)
   end
   
 end
