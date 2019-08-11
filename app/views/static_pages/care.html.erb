@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Care</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  </head>
-  <body class="care">
 
     <div class="care-header"> 
       <div class="title-header">
@@ -24,7 +14,8 @@
       </ul>
     </div>
 
-    <article>
+
+    <article class="article">
       <div class="plant-pic">
         <%= image_tag 'article3.png', alt: 'article1'%>
       </div>
@@ -47,7 +38,7 @@
       </div>
       </article>
     </div>
-    <article>
+    <article class="article">
       <div class="plant-pic">
       <%= image_tag 'article2.png', alt: 'article1'%>
       </div>
@@ -70,7 +61,7 @@
         </div>
       </div>
     </article>
-    <article>
+    <article class="article">
       <div class="plant-pic">
       <%= image_tag 'article3.png', alt: 'article3'%>
       </div>
@@ -93,7 +84,7 @@
       </div>
     </div>
   </article>
-    <section>
+    <section class="section">
       <p id="load-more">Load more</p>
     </section>
   </body>

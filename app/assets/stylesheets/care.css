@@ -4,18 +4,13 @@
   background-image: url("careheader.png");
   background-size: 100%; 
 }
-
 #top-ten{
   padding-top: 15rem;
 }
-
 .title-header{
-  /* margin-top: 17rem; */
   margin-left: 10rem;
   font-family: serif; 
   font-size: 35px;
-}
-.care-sub-nav{
 }
 .care-sub-nav ul {
   list-style: none;
@@ -40,7 +35,7 @@
   width: 100vw;
 }
 
-article {
+.article {
   display:flex;
   margin-left: 7rem;
   margin:5rem;
@@ -66,7 +61,7 @@ article {
 .read-more:hover{
   cursor:pointer;
 }
-section{
+.section{
   justify-content: center;
   text-align:center;
   height: 7rem;
