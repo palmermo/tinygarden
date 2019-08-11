@@ -72,4 +72,16 @@
       </div>
     </footer>
   </body>
+  <script>
+    const nav = document.getElementById("navbar")
+    window.addEventListener('scroll', function() {
+      if (window.scrollY >= 130) {
+        nav.classList.add("nav-color")
+        nav.classList.remove("nav-transparent")
+      } else {
+        nav.classList.add("nav-transparent")
+        nav.classList.remove("nav-color")
+      }
+    })
+  </script>
 </html>
