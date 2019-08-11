@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 const Summary = props => {
-
   const shipping = 500
   const totalItems = props.summary
   const taxAmmount = (totalItems / 100) * 7
   const total = totalItems + taxAmmount + (shipping / 100)
+
+  
 
   return (
     <section id="summary" >
