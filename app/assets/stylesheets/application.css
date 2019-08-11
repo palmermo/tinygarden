@@ -127,6 +127,11 @@ a:hover::before, a:focus::before {
   cursor: text;
 }
 
+nav ul li a {
+  color:black;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
 .dropdown-content {
   display: none;
   position: absolute;
@@ -189,7 +194,7 @@ nav {
 .lightgreybackground {
   padding-top: 4%;
   background-color: rgb(241, 240, 240);
-}
+  }
 
 /* ----------------- Misc ----------------- */
 
@@ -278,6 +283,39 @@ z-index: 5;
   flex-wrap: wrap;
   margin: 40px;
 }
+/* ------------------------- Instagram Feed ---------------------- */
+
+#insta-bgd {
+  background-color: #EBF9F6;
+}
+#showoff {
+  font-family: serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding:0.3rem;
+}
+.instafeed {
+  display:flex;
+  justify-content: center;
+}
+.instafeed img{
+  height: 30vh;
+  cursor: pointer;
+  transition: .40s ease-in-out;
+}
+.instafeed img:hover{
+  cursor: pointer;
+  opacity: 0.7;
+
+}
+  #mytinygdn {
+  font-family: serif;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  font-weight: lighter;
+}
+
 
 /* ----------------- Global Footer ----------------- */
 
