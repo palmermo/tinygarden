@@ -1,0 +1,84 @@
+
+.care-header{
+  height: 500px;
+  background-image: url("careheader.png");
+  background-size: 100%; 
+}
+
+#top-ten{
+  padding-top: 15rem;
+}
+
+.title-header{
+  /* margin-top: 17rem; */
+  margin-left: 10rem;
+  font-family: serif; 
+  font-size: 35px;
+}
+.care-sub-nav{
+}
+.care-sub-nav ul {
+  list-style: none;
+  text-align: center;
+}
+.care-sub-nav ul li {
+  display: inline-block;
+  margin-right: 150px;
+  margin-left: 150px;
+  color: grey;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  font-weight: bold;	
+  letter-spacing: 0.27px;
+}
+.care-sub-nav ul li:hover {
+  color:#FFB400;
+  cursor: pointer;
+}
+#care-header{
+  height: 473px;
+  width: 100vw;
+}
+
+article {
+  display:flex;
+  margin-left: 7rem;
+  margin:5rem;
+  justify-content: center;
+}
+.plant-pic {
+  height: 277px;
+}
+.care-tips {
+  margin-left: 1.5rem;
+  font-family: Lato;
+}
+.title{
+  font-family: Serif;
+  margin-left: 1.5rem;
+}
+.read-more{
+  font-family: Lato;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.read-more:hover{
+  cursor:pointer;
+}
+section{
+  justify-content: center;
+  text-align:center;
+  height: 7rem;
+  text-decoration: underline;
+  font-family: Lato;
+  font-weight:bold;
+  font-size: 1.7rem;
+}
+#load-more{
+  width: 10rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}

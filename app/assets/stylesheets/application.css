@@ -119,6 +119,7 @@ nav ul li a {
   padding: 15px;
   display: block;
   text-decoration: none;
+}
 .dropdown-content {
   display: none;
   position: absolute;
