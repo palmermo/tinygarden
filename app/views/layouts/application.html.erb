@@ -7,7 +7,9 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'cart-bundle' %>
   </head>
 
   <body>
@@ -25,7 +27,10 @@
           <div class="dropdown" id="loginBox-position">
             <a href="#" id="drop-styles"><%= current_user ? "Account" : "Login" %></a>
             <div class="dropdown-content">
-              <%= link_to('My Page', users_show_path, class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user %>
+              <%= link_to('My Page', 
+                user_session_path, 
+                class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user 
+              %>
               <%= link_to('Logout', 
                 destroy_user_session_path, 
                 method: 'delete', 
@@ -45,7 +50,7 @@
               %>
             </div>
           </div>
-          <span id="cart" ><%= link_to "Cart", root_path %></span>
+          <span id="cart" ><%= link_to "Cart", cart_path %></span>
         </div>
       </div>
     </nav>
