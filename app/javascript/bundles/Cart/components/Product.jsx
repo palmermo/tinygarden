@@ -20,7 +20,7 @@ class Product extends Component {
       <li className="product-container">
         {
           product.images.map ((image, i) => {
-            return <img src={image} alt="wtf" key={i}/>
+            return <img src={image} alt="product" key={i}/>
           })
         }
         <div className="product-details">
