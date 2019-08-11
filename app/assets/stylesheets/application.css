@@ -353,3 +353,12 @@ z-index: 5;
   display: inline-flex;
   flex-direction: row-reverse;
 }
+
+#facebook{
+  text-decoration:none;
+} #youtube{
+  text-decoration:none;
+}
+#instagram{
+  text-decoration:none;
+}
