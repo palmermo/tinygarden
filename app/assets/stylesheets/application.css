@@ -320,6 +320,7 @@ z-index: 5;
 #general-footer .box{
   grid-template-columns: 2fr 1fr;
   display: grid;
+  font-family: 'Lato', sans-serif;
   width: 100%;
   height: fit-content;
   background-color: rgb(28,81,81);
@@ -341,8 +342,8 @@ z-index: 5;
 }
 
 #general-footer img{
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   margin: 5px;
 }
