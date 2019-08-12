@@ -213,12 +213,11 @@ nav {
   text-align: center;
   margin: auto;
 }
-  
-  
+
 .lightgreybackground {
   padding-top: 4%;
   background-color: rgb(241, 240, 240);
-  }
+}
 
 /* ----------------- Misc ----------------- */
 
@@ -343,15 +342,16 @@ z-index: 5;
 
 /* ----------------- Global Footer ----------------- */
 
-#general-footer {
-  position: absolute;
+#general-footer{
+  position: relative;
+  bottom:0;
   width: 100%;
 }
-
 
 #general-footer .box{
   grid-template-columns: 2fr 1fr;
   display: grid;
+  font-family: 'Lato', sans-serif;
   width: 100%;
   height: fit-content;
   background-color: rgb(28,81,81);
@@ -373,8 +373,8 @@ z-index: 5;
 }
 
 #general-footer img{
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   margin: 5px;
 }
@@ -383,4 +383,13 @@ z-index: 5;
   margin: auto 10%;
   display: inline-flex;
   flex-direction: row-reverse;
+}
+
+#facebook{
+  text-decoration:none;
+} #youtube{
+  text-decoration:none;
+}
+#instagram{
+  text-decoration:none;
 }

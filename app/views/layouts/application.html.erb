@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'product' %>
 
   </head>
 
@@ -62,28 +63,16 @@
     <footer id="general-footer">
       <div class="box">
         <div class="footer-left">
-          <h2>Tiny Garden</h2>
+          <h2>tiny garden</h2>
           <p>Copyright. All rights reserved.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras.</p>
         </div>
         <div class="footer-right">
-          <%= image_tag 'Confirmation_Page.jpg', alt: 'facebook'%>
-          <%= image_tag 'Confirmation_Page.jpg', alt: 'twitter'%>
-          <%= image_tag 'Confirmation_Page.jpg', alt: 'Instagram'%>
+          <a id="facebook" href="https://www.facebook.com/" target="_blank"><%= image_tag 'facebookicon.png', alt: 'Facebook'%></a>
+          <a id="youtube" href="https://www.youtube.com/" target="_blank"><%= image_tag 'youtubeicon.png', alt: 'Youtube'%></a>
+          <a id="instagram" href="https://www.instagram.com/" target="_blank"><%= image_tag 'instaicon.png', alt: 'Instagram'%></a>
         </div>
       </div>
     </footer>
   </body>
-  <script>
-    window.addEventListener('scroll', function() {
-      let nav = document.getElementById("navbar")
-      if (window.scrollY >= 35) {
-        nav.classList.add("nav-color")
-        nav.classList.remove("nav-transparent")
-      } else if (window.scrollY <= 30) {
-        nav.classList.add("nav-transparent")
-        nav.classList.remove("nav-color")
-      }
-    })
-  </script>
 </html>

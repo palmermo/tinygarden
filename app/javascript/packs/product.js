@@ -1,8 +1,10 @@
 import ReactOnRails from 'react-on-rails';
 
-import HelloWorld from '../bundles/HelloWorld/components/HelloWorld';
+import Cart from '../bundles/Cart/components/Cart';
+import Plants from '../bundles/Plants/components'
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
-  HelloWorld,
+  Cart,
+  Plants
 });

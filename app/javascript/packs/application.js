@@ -14,17 +14,23 @@ require("channels")
 // or the `imagePath` JavaScript helper below.
 //
 // const images = require.context('../images', true)
+const navScroll = () => {
+  const nav = document.getElementById("navbar")
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= 130) {
+      nav.classList.add("nav-color")
+      nav.classList.remove("nav-transparent")
+    } else {
+      nav.classList.add("nav-transparent")
+      nav.classList.remove("nav-color")
+    }
+  })
+}
 
+const executeScripts = () => {
+  navScroll()
+}
 
-import ReactOnRails from 'react-on-rails';
-    
-    import Cart from '../bundles/Cart/components/Cart';
-    import Plants from '../bundles/Plants/components'
-    
-    // This is how react_on_rails can see the HelloWorld in the browser.
-    ReactOnRails.register({
-      Cart, Plants
-    });
-
-
-
+['ready', 'turbolinks:load'].forEach( event => {
+  document.addEventListener(event, executeScripts)
+})
