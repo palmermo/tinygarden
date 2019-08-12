@@ -12,4 +12,7 @@ class StaticPagesController < ApplicationController
   def design
   end
 
+  def cart
+    @cart_items = current_user.cart.cart_products.map(&:to_json)
+  end
 end
