@@ -14,6 +14,17 @@ require("channels")
 // or the `imagePath` JavaScript helper below.
 //
 // const images = require.context('../images', true)
-document.addEventListener('turbolinks:load', () => {
-  console.log('yo')
-})
+
+
+import ReactOnRails from 'react-on-rails';
+    
+    import Cart from '../bundles/Cart/components/Cart';
+    import Plants from '../bundles/Plants/components'
+    
+    // This is how react_on_rails can see the HelloWorld in the browser.
+    ReactOnRails.register({
+      Cart, Plants
+    });
+
+
+
