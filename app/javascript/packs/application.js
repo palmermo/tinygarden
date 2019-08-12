@@ -14,6 +14,24 @@ require("channels")
 // or the `imagePath` JavaScript helper below.
 //
 // const images = require.context('../images', true)
-document.addEventListener('turbolinks:load', () => {
-  console.log('yo')
+const navScroll = () => {
+  const nav = document.getElementById("navbar")
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= 130) {
+      nav.classList.add("nav-color")
+      nav.classList.remove("nav-transparent")
+    } else {
+      nav.classList.add("nav-transparent")
+      nav.classList.remove("nav-color")
+    }
+  })
+}
+
+
+const executeScripts = () => {
+  navScroll()
+}
+
+['ready', 'turbolinks:load'].forEach( event => {
+  document.addEventListener(event, executeScripts)
 })
