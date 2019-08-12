@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root 'static_pages#landing'
-  get 'users/show'
+  get '/oauth/callback', to: 'instagram#callback'
   get '/design', to: 'static_pages#design', as: 'design'
   get '/care', to: 'static_pages#care', as: 'care'
   get '/cart', to: 'static_pages#cart', as: 'cart'
   devise_for :user
 
+  resources :users, only: [:show]
   resources :products, only: [:show, :index]
   resources :plants, only: [:show, :index]
 

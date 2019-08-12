@@ -9,8 +9,8 @@ const Products = props => {
           props.items.map((item, i) => {
             return (
               <div key={item.id}>
-                <Product key={item.sku} item={item} /> 
-                <hr key={i}/>
+                <Product item={item} /> 
+                <hr/>
               </div>
             )
           })
