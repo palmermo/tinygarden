@@ -15,15 +15,8 @@
  */
 
 body {
-  margin: 0;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  color: black;
+  margin: 0 auto;
+  max-width: 2000px;
 }
 
 /* ----------------- Fonts ----------------- */
@@ -45,16 +38,20 @@ button{font-family: 'Lato', sans-serif; font-weight: bold;}
   height: 10%;
 }
 
-.nav-color {
+a, a:link, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;}
+
+a:visited {color: black;}
+
+#navbar .nav-color {
   background-color: white;
   transition: ease-in;
   transition-duration: .2s;
 }
 
-.nav-transparent {
+#navbar .nav-transparent {
   background-color: transparent;
   transition-duration: .2s;
-
 }
 
 #inner-nav {
@@ -197,155 +194,16 @@ nav {
 #navspacer {
   margin-top: 2.3rem;
 }
-/* ----------------- Main ----------------- */
-
-
-/* ----------------- Home Welcome Block ----------------- */
-
-#welcome h1{
-  margin-block-start: 7rem;
-  margin-block-end: 1rem;
-}
-
-.center {
-  display: grid;
-  align-items: center;
-  text-align: center;
-  margin: auto;
-}
-
-.lightgreybackground {
-  padding-top: 4%;
-  background-color: rgb(241, 240, 240);
-}
-
-/* ----------------- Misc ----------------- */
-
-/* ----------------- Buttons ----------------- */
-
-.btnprimaryhome{
-  background-color: black;
-  color: white;
-  width: 300px;
-  height: 50px;
-  border-radius: 40px;
-  font-size: 18px;
-  margin: 60px;
-  transition: 0.3s;
-}
-
-.btnprimaryhome a:visited{
-  color: white !important;
-}
-
-.btnprimaryhome:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.btnsecondaryhome{
-  text-decoration-line: none;
-  background-color: white;
-  color: black;
-  width: 300px;
-  height: 50px;
-  border-radius: 40px;
-  outline-style: solid 4px black;
-  font-size: 18px;
-  margin: 60px;
-  border: solid black 2px;
-  transition: 0.3s;
-}
-
-.btnsecondaryhome:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-/* ----------------- Featured Products: Images, articles and Hoover effects ----------------- */
-
-/* #Featured-Products{
-
-} */
-
-.cards img{
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.cards img:hover {
-background-color: rgba(58, 58, 58, 0.658);
-z-index: 5;
-}
-
-.products{
-  padding: 10px;
-}
-
-.cards:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-  opacity: 1;
-}
-
-.cards {
-  transition: 0.3s;
-  width: 300px;
-  margin: 30px 10px;
-}
-
-.inline {
-  display: inline-flex;
-  margin: 0 30px;
-}
-
-.shopfeatprod{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 40px;
-}
-/* ------------------------- Instagram Feed ---------------------- */
-
-#insta-bgd {
-  background-color: #EBF9F6;
-}
-#showoff {
-  font-family: serif;
-  text-align: center;
-  font-size: 1.5rem;
-  padding:0.3rem;
-}
-.instafeed {
-  display:flex;
-  justify-content: center;
-}
-.instafeed img{
-  height: 30vh;
-  cursor: pointer;
-  transition: .40s ease-in-out;
-}
-.instafeed img:hover{
-  cursor: pointer;
-  opacity: 0.7;
-
-}
-  #mytinygdn {
-  font-family: serif;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 0.3rem;
-  font-weight: lighter;
-}
-
 
 /* ----------------- Global Footer ----------------- */
+
 
 #general-footer{
   position: relative;
   bottom:0;
   width: 100%;
+  background-color: rgb(28,81,81);
+  color: white;
 }
 
 #general-footer .box{
@@ -354,13 +212,12 @@ z-index: 5;
   font-family: 'Lato', sans-serif;
   width: 100%;
   height: fit-content;
-  background-color: rgb(28,81,81);
-  color: white;
+  margin: auto;
 }
 
 #general-footer .footer-left{
-  margin: auto 10%;
-  padding: 15px 0;
+  margin: auto 5%;
+  padding: 40px;
 }
 
 #general-footer .footer-left h2{
@@ -385,11 +242,15 @@ z-index: 5;
   flex-direction: row-reverse;
 }
 
-#facebook{
-  text-decoration:none;
-} #youtube{
-  text-decoration:none;
-}
-#instagram{
-  text-decoration:none;
+@media only screen and (max-width: 600px) {
+
+  #general-footer .box{
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+  #general-footer .footer-right{
+    margin: auto 5%;
+    padding: 0 40px;
+  }
 }
