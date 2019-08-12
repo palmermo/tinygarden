@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
   def care
   end
 
+  def doctor
+  end
+
   def design
   end
 
