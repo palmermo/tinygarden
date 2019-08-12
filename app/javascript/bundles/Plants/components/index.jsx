@@ -11,19 +11,16 @@ class Plants extends Component {
   }
 
   fetchPlants = () => {
-    const { filters } = this.state;
-    const currentFilters = Object.keys(this.state.filters)
-    const activeFilters = currentFilters.filter(filter => filters[filter].length)
-    const searchParams = activeFilters.length && activeFilters.reduce((acc, filter) => {
-      const filterParams = `${filter}=${filters[filter].join(',')}`
-      if (acc) return acc + '&' + filterParams
-        return filterParams
-    }, "") 
-    const url = searchParams ? `/plants.json?${searchParams}` : '/plants.json'
-    console.log('URL', url)
-    axios.get(url)
-    .then(response => this.setState({ plants: response.data.plants }))
-  }
+  const { filters } = this.state;
+  const searchParams = ['size', 'light', 'maintenance', 'category'].reduce((acc, filterType) => {
+    const filter = filters[filterType] || [];
+    if (!filter.length) return acc;
+    const filterParams = `${filterType}=${filter.join(',')}`;
+    return acc ? `${acc}&${filterParams}` : filterParams;
+  }, '');
+  const url = searchParams ? `/plants.json?${searchParams}` : '/plants.json';
+  axios.get(url).then(({ data }) => this.setState({ plants: data.plants }));
+  };
 
   handleFilter = (type, value) => {
     const filters = this.state.filters[type]
