@@ -1,6 +1,10 @@
 /* ----------------- Global Footer ----------------- */
 
 #general-footer{
+  grid-template-columns: 2fr 1fr;
+  display: grid;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
   height: fit-content;
   background-color: rgb(28,81,81);
   color: white;
@@ -17,7 +21,7 @@
 }
 
 #general-footer .footer-left h2{
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Grenze', serif;
 }
 
 #general-footer .footer-left p{

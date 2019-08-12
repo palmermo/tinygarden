@@ -1,7 +1,7 @@
 <%# <%= render "plants/index", plants: @plants %>
 
-
 <div class="attachedsides">
+<<<<<<< HEAD
   <section id="welcome" class="center">
     <div>
       <h1>
@@ -15,6 +15,15 @@
     <div class="center">
       <button class="btn-round Yellow" >
         <%= link_to "Design your space", design_path %>
+=======
+  <section id="welcome" class="center lightgreybackground">
+    <h1>Small spaces didn't stop us.</h1>
+    <h4>Plants are always a good idea. Bring your garden
+    <br>inside and customize it to fit your space</h4>
+    <div class="center">
+      <button class="btnprimaryhome">
+        Design your space
+>>>>>>> master
       </button>
     </div>
     <div class="feat-title">
@@ -138,6 +147,7 @@
         </div>
       </article>
       <article class="cards">
+<<<<<<< HEAD
         <div class="hvrbox">
           <%= image_tag 'Confirmation_Page.jpg', alt: 'hey'%>
           <div class="space-between">
@@ -158,6 +168,13 @@
           <button class ="btn-round Red">
             Add to Cart
           </button>
+=======
+        <%= image_tag 'Confirmation_Page.jpg', alt: 'hey'%>
+        <div class="s"></div>
+        <div class="homefeatprod">
+          <h3 class="left">Snake plant $24</h3>
+          <!-- <h4 class="right">$24</h4> -->
+>>>>>>> master
         </div>
       </article>
       <article class="cards">
@@ -208,6 +225,7 @@
       </article>
     </div>
     <div class="center">
+<<<<<<< HEAD
       <a href="#" class="btn-underline Blacks">
         See all products
       </a>
@@ -284,7 +302,27 @@
   
   </section>
   <div>
-
-  </div>
+=======
+      <button class="btnsecondaryhome">
+          See all products
+      </button>
+    </div>
+  </section>
 </div>
 
+<div id="showoff">
+  <p> Show off your tiny garden</p>
+</div>
+
+<%#div class="instafeed">
+  <% @insta_feed.each do |image| %>
+    <%#= image_tag image.images.thumbnail.url%>
+<%#% end %>
+<%#/div>
+>>>>>>> master
+
+<div id="mytinygdn">
+  <p> #mytinygarden </p>
+</div>
+
+<%# This is a great comment! %>

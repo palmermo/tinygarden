@@ -1,0 +1,9 @@
+#products-wrapper {
+  width: 100%;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10.1%;
+  margin-bottom: 7%;
+}

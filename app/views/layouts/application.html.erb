@@ -7,45 +7,49 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'product' %>
+
   </head>
 
   <body>
-    <nav id="navbar">
+    <nav id="navbar" >
       <div id="inner-nav">
-        <ul>
-          <li><%= link_to "Shop", products_path, class: params[:action] == 'shop' ? 'nav-active' : ''  %></li>
+        <ul class="left-side-nav">
+          <li><%= link_to "Shop", products_path, class: params[:action] == 'index' ? 'nav-active' : ''  %></li>
           <li><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
           <li><%= link_to "Design", design_path, class: params[:action] == 'design' ? 'nav-active' : '' %></li>
         </ul>
-        <ul>
+        <ul class="title">
           <li class="animated bounce"><%= link_to 'Tiny Garden', root_path %></li>
         </ul>
         <div class="right-side-nav">
           <div class="dropdown" id="loginBox-position">
             <a href="#" id="drop-styles"><%= current_user ? "Account" : "Login" %></a>
             <div class="dropdown-content">
-              <%= link_to('My Page', users_show_path, class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user %>
-              <%= link_to('Logout', 
-                destroy_user_session_path, 
+              <%= link_to('My Page', current_user, 
+                class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user 
+              %>
+              <%= link_to('Logout', destroy_user_session_path, 
                 method: 'delete', 
                 class: ('nav-active' if params[:action] == 'destroy' && params[:controller] == 'devise/registrations')) if current_user
               %>
-              <%= link_to('Edit', 
-                edit_user_registration_path, 
+              <%= link_to('Edit', edit_user_registration_path, 
                 class: ('nav-active' if params[:action] == 'edit' && params[:controller] == 'devise/registrations')) if current_user
               %>
-              <%= link_to('Log In', 
-                new_user_session_path, 
+              <%= link_to('Log In', new_user_session_path, 
                 class: ('nav-active' if params[:action] == 'new' && params[:controller] == 'devise/sessions')) unless current_user 
               %>
-              <%= link_to('Sign Up', 
-                new_user_registration_path, 
+              <%= link_to('Sign Up', new_user_registration_path, 
                 class: ('nav-active' if params[:action] == 'new' && params[:controller] == 'devise/registrations')) unless current_user
               %>
             </div>
           </div>
-          <span id="cart" ><%= link_to "Cart", root_path %></span>
+          <span id="cart" ><%= link_to "Cart", cart_path, class: params[:action] == 'cart' ? 'nav-active' : ''
+          %></span>
         </div>
       </div>
     </nav>
@@ -55,14 +59,14 @@
      <footer id="general-footer">
       <div class="box">
         <div class="footer-left">
-          <h2>Tiny Garden</h2>
+          <h2>tiny garden</h2>
           <p>Copyright. All rights reserved.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Nunc sed blandit libero volutpat sed cras.</p>
         </div>
         <div class="footer-right">
-          <%= image_tag 'Confirmation_Page.jpg', alt: 'facebook'%>
-          <%= image_tag 'Confirmation_Page.jpg', alt: 'twitter'%>
-          <%= image_tag 'Confirmation_Page.jpg', alt: 'Instagram'%>
+          <a id="facebook" href="https://www.facebook.com/" target="_blank"><%= image_tag 'facebookicon.png', alt: 'Facebook'%></a>
+          <a id="youtube" href="https://www.youtube.com/" target="_blank"><%= image_tag 'youtubeicon.png', alt: 'Youtube'%></a>
+          <a id="instagram" href="https://www.instagram.com/" target="_blank"><%= image_tag 'instaicon.png', alt: 'Instagram'%></a>
         </div>
       </div>
     </footer>
