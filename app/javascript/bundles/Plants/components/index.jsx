@@ -35,7 +35,7 @@ class Plants extends Component {
     return (
       <div>
         {
-        filters.map(filter => <Filter {...filter} handleClick={this.handleFilter}/>)
+        filters.map((filter, i) => <Filter key={`filter-${i}`} {...filter} handleClick={this.handleFilter}/>)
         }
         <PlantList plants={plants}/>
       </div>
