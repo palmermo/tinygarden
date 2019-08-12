@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'users/show'
   get '/design', to: 'static_pages#design', as: 'design'
   get '/care', to: 'static_pages#care', as: 'care'
-  get '/doctor', to: 'static_pages#doctor', as: 'doctor'
+  get '/care/:doctor', to: 'static_pages#care', as: 'care_doctor'
 
   devise_for :users
 

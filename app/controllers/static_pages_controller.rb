@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
   # end
 
   def care
+    @doctor = params[:doctor] == 'doctor'
   end
 
   def doctor
