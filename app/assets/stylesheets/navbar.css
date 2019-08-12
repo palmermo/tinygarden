@@ -32,7 +32,7 @@
   text-decoration: none;
   transition: color 0.1s, background-color 0.1s;
 }
- #navbar a::before {
+#navbar a::before {
   content: '';
   display: block;
   position: absolute;
@@ -48,13 +48,13 @@
 #navbar a.nav-active {
   content: '';
   display: block;
-  position: absolute;
+  position: relative;
   bottom: 3px;
   left: 0;
   height: 3px;
   width: 100%;
-  background-color: #000;
-  transform: scale(1,1)
+  /* background-color: #000; */
+  transform: scale(1,1);
 }
 
 #navbar a:active::before {
