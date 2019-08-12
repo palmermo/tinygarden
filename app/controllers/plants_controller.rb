@@ -30,7 +30,7 @@ class PlantsController < ApplicationController
     @plants = Plant.all
     filtered_plants = [plants_by_size, plants_by_light, plants_by_maintenance, plants_by_category]
     .select { |plant| plant }
-    .reduce {|acc, plant| plant ? acc & plant : acc }
+    .reduce { |acc, plant| acc & plant }
     @plants = has_params ? filtered_plants : Plant.all
     respond_to do |format|
       format.html {}
