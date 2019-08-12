@@ -45,15 +45,26 @@ button{font-family: 'Lato', sans-serif; font-weight: bold;}
   height: 10%;
 }
 
+.nav-color {
+  background-color: white;
+  transition: ease-in;
+  transition-duration: .2s;
+}
+
+.nav-transparent {
+  background-color: transparent;
+  transition-duration: .2s;
+
+}
+
 #inner-nav {
   height: 100%;
-  width: 95%;
-  padding-right: 2%;
+  width: 100%;
+  padding-right: 5%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: transparent;
 }
 
 ol, ul {
@@ -127,6 +138,13 @@ a:hover::before, a:focus::before {
   cursor: text;
 }
 
+nav ul li a {
+  color:black;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -146,14 +164,25 @@ a:hover::before, a:focus::before {
   flex-direction: column;
 }
 
+.left-side-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 0;
+  margin-right: 1.6%;
+  padding: 0;
+}
+
 .right-side-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0;
 }
 
 nav {
-  background-color: transparent;
   position: fixed;
   left: 0;
   top: 0;
@@ -184,8 +213,7 @@ nav {
   text-align: center;
   margin: auto;
 }
-  
-  
+
 .lightgreybackground {
   padding-top: 4%;
   background-color: rgb(241, 240, 240);
@@ -236,9 +264,9 @@ nav {
 
 /* ----------------- Featured Products: Images, articles and Hoover effects ----------------- */
 
-#Featured-Products{
+/* #Featured-Products{
 
-}
+} */
 
 .cards img{
   height: 300px;
@@ -278,18 +306,52 @@ z-index: 5;
   flex-wrap: wrap;
   margin: 40px;
 }
+/* ------------------------- Instagram Feed ---------------------- */
+
+#insta-bgd {
+  background-color: #EBF9F6;
+}
+#showoff {
+  font-family: serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding:0.3rem;
+}
+.instafeed {
+  display:flex;
+  justify-content: center;
+}
+.instafeed img{
+  height: 30vh;
+  cursor: pointer;
+  transition: .40s ease-in-out;
+}
+.instafeed img:hover{
+  cursor: pointer;
+  opacity: 0.7;
+
+}
+  #mytinygdn {
+  font-family: serif;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  font-weight: lighter;
+}
+
 
 /* ----------------- Global Footer ----------------- */
 
-#general-footer {
-  position: absolute;
+#general-footer{
+  position: relative;
+  bottom:0;
   width: 100%;
 }
-
 
 #general-footer .box{
   grid-template-columns: 2fr 1fr;
   display: grid;
+  font-family: 'Lato', sans-serif;
   width: 100%;
   height: fit-content;
   background-color: rgb(28,81,81);
@@ -302,7 +364,7 @@ z-index: 5;
 }
 
 #general-footer .footer-left h2{
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Grenze', serif;
 }
 
 #general-footer .footer-left p{
@@ -311,8 +373,8 @@ z-index: 5;
 }
 
 #general-footer img{
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   margin: 5px;
 }
@@ -321,4 +383,13 @@ z-index: 5;
   margin: auto 10%;
   display: inline-flex;
   flex-direction: row-reverse;
+}
+
+#facebook{
+  text-decoration:none;
+} #youtube{
+  text-decoration:none;
+}
+#instagram{
+  text-decoration:none;
 }

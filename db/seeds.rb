@@ -9,17 +9,19 @@ Cart.create(
 Plant.destroy_all
 
 Plant.create([
-  {name: "Peppermint", size: 1,light: 3, maintenance: 1, category: 1, description: "#"},
-  {name: "Rubber Plant", size: 2,light: 2, maintenance: 2, category: 2, description: "#"},
-  {name: "Basil", size: 1,light: 3, maintenance: 1, category: 1, description: "#"},
-  {name: "ZZ Plant", size: 2,light: 2, maintenance: 1, category: 2, description: "#"},
-  {name: "Snake Plant", size: 2,light: 1, maintenance: 1, category: 2, description: "#"},
-  {name: "Aloe", size: 1,light: 3, maintenance: 1, category: 1, description: "#"},
-  {name: "Rosemary", size: 1,light: 3, maintenance: 1, category: 1, description: "#"},
-  {name: "Calathea", size: 2,light: 1, maintenance: 2, category: 2, description: "#"},
-  {name: "Pothos", size: 2,light: 2, maintenance: 2, category: 2, description: "#"},
-  {name: "Monstera", size: 2,light: 1, maintenance: 1, category: 2, description: "#"},
+  {name: "Peppermint", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
+  {name: "Rubber Plant", size: 2,light: 2, maintenance: 2, category: 1, description: "#"},
+  {name: "Basil", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
+  {name: "ZZ Plant", size: 2,light: 2, maintenance: 1, category: 1, description: "#"},
+  {name: "Snake Plant", size: 2,light: 1, maintenance: 1, category: 1, description: "#"},
+  {name: "Aloe", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
+  {name: "Rosemary", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
+  {name: "Calathea", size: 2,light: 1, maintenance: 2, category: 1, description: "#"},
+  {name: "Pothos", size: 2,light: 2, maintenance: 2, category: 1, description: "#"},
+  {name: "Monstera", size: 2,light: 1, maintenance: 1, category: 1, description: "#"},
 ])
+
+Product.destroy_all
 
 Product.destroy_all
 
