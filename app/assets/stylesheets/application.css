@@ -19,18 +19,6 @@ body {
   max-width: 2000px;
 }
 
-/* ----------------- Fonts ----------------- */
-
-h1                    {font-family: 'Source Serif Pro', serif;}
-h2, h3, h4, h5, h6, a {font-family: 'Lato', sans-serif;}
-
-h1{font-size: 40px; margin-block-start: 0; margin-block-end: 0;}
-h2{font-size: 30px; margin-block-start: 0; margin-block-end: 0;}
-h3{font-size: 24px; margin-block-start: 0; margin-block-end: 0;}
-h4{font-size: 18px; margin-block-start: 0; margin-block-end: 0;}
-h5{font-size: 16px; margin-block-start: 0; margin-block-end: 0;}
-h6{font-size: 14px; margin-block-start: 0; margin-block-end: 0;}
-
 button{font-family: 'Lato', sans-serif; font-weight: bold;}
 /* ----------------- NAVBAR ----------------- */
 
@@ -156,10 +144,24 @@ nav ul li a {
   right: 0rem;
 }
 
-.dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
+a, a:link, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;
 }
+
+/* ----------------- Fonts ----------------- */
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Source Serif Pro', serif;}
+
+/* a, p {font-family: 'Lato', sans-serif;} */
+
+h1{font-size: 50px; margin-block-start: 0; margin-block-end: 0;}
+h2{font-size: 42px; margin-block-end: 0;}
+h3{font-size: 22px; margin-block-start: 0; margin-block-end: 0;}
+h4{font-size: 24px; margin-block-start: 0; margin-block-end: 0;}
+h5{font-size: 22px; margin-block-start: 0; margin-block-end: 0;}
+h6{font-size: 20px; margin-block-start: 0; margin-block-end: 0;}
+
+button{font-family: 'Lato', sans-serif; font-weight: bold;}
 
 .left-side-nav {
   margin: 0;
@@ -195,7 +197,7 @@ nav {
   margin-top: 2.3rem;
 }
 
-/* ----------------- Global Footer ----------------- */
+/* ----------------- How It Works Section Homepage ----------------- */
 
 
 #general-footer{
@@ -220,26 +222,87 @@ nav {
   padding: 40px;
 }
 
-#general-footer .footer-left h2{
-  font-family: 'Grenze', serif;
+/* ----------------- Why Plants ----------------- */
+
+
+#why-plants .box{
+  width:100%;
+  height: 400px;
+  background-color: lightgray;
 }
 
-#general-footer .footer-left p{
-  margin-block-start: 0px;
-  margin-block-end: 15px;
+#why-plants .threecol{
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  flex-wrap: wrap;
+  padding: 0 30px;
 }
 
-#general-footer img{
-  height: 40px;
-  width: 40px;
+#why-plants .backgroundgrey{
+  background-color: lightgray;
+}
+
+#why-plants .threecol .padding{
+  width: 300px;
+  margin: 30px auto;
+  justify-content: space-around;
+  text-align: justify;
+
+}
+
+#why-plants h3{
+  color: #00927A;
+}
+
+#why-plants .extramargin{
+  margin: 10px;
+}
+
+
+/* ----------------- Care Basics ----------------- */
+
+#Care-Basics{
+  background-color: #FFFAF0;
+  width:100%;
+  height: fit-content;
+}
+
+#Care-Basics .card{
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  justify-content: space-around;
+
+}
+
+#Care-Basics .title{
+  margin: 40px 0;
+  padding: 60px 0;
+  width: 100%;
+  text-align: center;
+}
+#Care-Basics .inner-card{
+  width: 300px;
+  height: 500px;
+  background-color: #FFE2A5;
+  margin: 10px;
+  display: grid;
+  padding: 0 50px 30px 50px;
+  border-radius: 10px;
+}
+
+#Care-Basics .inner-card img{
+  width: 200px;
+  margin: auto;
+}
+
+#Care-Basics h3{
+  margin: 80px auto;
+  width: 220px;
+  text-align: center;
   cursor: pointer;
-  margin: 5px;
-}
-
-#general-footer .footer-right{
-  margin: auto 10%;
-  display: inline-flex;
-  flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 600px) {

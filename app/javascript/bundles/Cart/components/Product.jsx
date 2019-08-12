@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import '../../../../assets/stylesheets/products.css';
 
 class Product extends Component {
   state = {
     product: { images:[] },
-    amount: this.props.item.amount
+    amount: this.props.item.amount,
+    price: this.props.item.price
   }
 
   componentDidMount(){
@@ -15,7 +17,7 @@ class Product extends Component {
   }
 
   render(){
-    const { product } = this.state
+    const { product, price } = this.state
     return (
       <li className="product-container">
         {
@@ -24,8 +26,15 @@ class Product extends Component {
           })
         }
         <div className="product-details">
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
+          <div className="product-left">
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+            <button type="submit">+</button>
+          </div>
+          <div className="product-right">
+            <p>{(price / 100).toFixed(2)}</p>
+            <button type="submit">d</button>
+          </div>
         </div>
       </li>
     )

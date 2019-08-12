@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/cart', to: 'static_pages#cart', as: 'cart'
   devise_for :user
 
+  resources :users, only: [:show]
   resources :products, only: [:show, :index]
   resources :plants, only: [:show, :index]
 
