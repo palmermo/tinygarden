@@ -1,0 +1,125 @@
+/* ----------------- NAVBAR ----------------- */
+
+#navbar a:visited {
+  color: black;
+}
+
+#navbar ol, ul, li {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+#navbar li {
+  display: inline-block;
+  padding: 20px 0 20px;
+  vertical-align: middle;
+}
+#navbar a:hover, a:focus, a:active {
+  color: #999;
+  text-decoration: none;
+}
+
+#navbar a {
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  line-height: 16px;
+  text-transform: uppercase;
+  transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+  color: rgb(0,146,122);
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s;
+}
+ #navbar a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(0,146,122);
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s,transform 0.2s ease-out;
+}
+#navbar a.nav-active {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform: scale(1,1)
+}
+
+#navbar a:active::before {
+  background-color: #000;
+}
+
+#navbar a:hover::before, a:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: text;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  line-height: 2rem;
+  z-index: 1;
+  top: 2.7rem;
+  right: 0rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#inner-nav {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right-side-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navbar nav {
+  background-color:rgb(241, 240, 240);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+#cart {
+  margin-left: 2rem;
+}
+
+#navspacer {
+  margin-top: 2.3rem;
+}
