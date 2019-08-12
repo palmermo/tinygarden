@@ -13,7 +13,7 @@ const PlantList = ({ plants = [] }) => (
     <tbody>
       {
         plants.map(plant => (
-        <tr>
+        <tr key={plant.name}>
           <td>{plant.name}</td>
           <td>{plant.light}</td>
           <td>{plant.maintenance}</td>
