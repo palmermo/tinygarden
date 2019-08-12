@@ -1,7 +1,7 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show]
   def index
-    @filters = [
+    @filters = [ # TODO: need to get filter values from Model. Like: Plant.categories
       [
         { value: 0, label: 'small' },
         { value: 1, label: 'medium' },
