@@ -27,7 +27,6 @@ const navScroll = () => {
   })
 }
 
-
 const executeScripts = () => {
   navScroll()
 }

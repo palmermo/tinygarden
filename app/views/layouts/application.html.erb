@@ -11,18 +11,19 @@
     <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_pack_tag 'cart-bundle' %>
+    <%= javascript_pack_tag 'product' %>
+
   </head>
 
   <body>
     <nav id="navbar">
       <div id="inner-nav">
-        <ul>
+        <ul class="left-side-nav">
           <li><%= link_to "Shop", products_path, class: params[:action] == 'shop' ? 'nav-active' : ''  %></li>
           <li><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
           <li><%= link_to "Design", design_path, class: params[:action] == 'design' ? 'nav-active' : '' %></li>
         </ul>
-        <ul>
+        <ul class="title">
           <li class="animated bounce"><%= link_to 'Tiny Garden', root_path %></li>
         </ul>
         <div class="right-side-nav">

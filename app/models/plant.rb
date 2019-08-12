@@ -7,6 +7,11 @@ class Plant < ApplicationRecord
   enum maintenance: ['easy', 'intermediate', 'hard']
   enum category: ['houseplant', 'herb']
 
+  scope :by_size, -> (size) { where('size IN (?)', size) }
+  scope :by_light, -> (light) { where('light IN (?)', light) }
+  scope :by_maintenance, -> (maintenance) { where('maintenance IN (?)', maintenance) }
+  scope :by_category, -> (category) { where('category IN (?)', category) }
+
   include Rails.application.routes.url_helpers
   def to_json(options={})
     imgs = self.images.count > 0 ? self.images.map{ |img| rails_blob_path( img, only_path: true ) } : ['http://www.placepuppy.net/200/200']
