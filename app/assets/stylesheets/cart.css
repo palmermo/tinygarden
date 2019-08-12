@@ -25,15 +25,15 @@
 
 #products-container {
   width: 36%;
-  padding-right: 32%;
+  margin-right: 31%;
   font-family: 'Lato', sans-serif;
 }
 
 #cart-header {
   display: flex;
   justify-content: center;
-  padding: 4rem;
-  padding-top: 4%;
+  padding: 5%;
+  padding-top: 9%;
   background-color: rgb(218, 239, 236);
 }
 
@@ -43,7 +43,7 @@
 
 #summary {
   position: fixed;
-  width: 16%;
+  width: 21%;
   height: 63%;
   padding-left: 2.5rem;
   margin-left: 20%;

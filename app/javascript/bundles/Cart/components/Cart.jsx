@@ -10,7 +10,7 @@ class Cart extends Component {
 
   componentDidMount() {
     let subtotal = 0
-    this.state.cartItems.forEach(p => (subtotal += p.price) )
+    this.state.cartItems.forEach(p => (subtotal += p.price / 100) )
     this.setState({ subtotal })
   }
 
