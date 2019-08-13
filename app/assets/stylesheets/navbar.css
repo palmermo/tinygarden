@@ -1,7 +1,7 @@
 /* ----------------- NAVBAR ----------------- */
 
 #navbar {
-  height: 16%;
+  height: 21.2%;
   position: fixed;
   left: 0;
   top: 0;
@@ -62,13 +62,10 @@
   content: '';
   display: block;
   position: absolute;
-  padding-top: 16px;
-  padding-bottom: 6%;
-  bottom: 3px;
+  padding: 16px 0;
   left: 0;
   height: 1px;  
   width: 100%;
-  border-bottom: 3px solid black;
   transform-origin: right top;
   transform: scale(0, 1);
   transition: color 0.1s,transform 0.2s ease-out;
@@ -77,20 +74,23 @@
   content: '';
   display: block;
   position: relative;
-  padding-top: 16px;
-  padding-bottom: 6%;
+  padding: 16px 0;
   margin: 0 12px;
+  margin-top: 12.8%;
   bottom: 0.26rem;
   left: 0;
   width: 71%;
   height: 100%;
   border-bottom: 3px solid black;
+  transition: color 0.1s,transform 0.2s ease-out;
+  transform-origin: right top;
   transform: scale(1,1);
 }
 
 #navbar a:hover::before, a:focus::before {
   transform-origin: left top;
   transform: scale(1, 1);
+  border-bottom: 3px solid black;
 }
 
 .title {

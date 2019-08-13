@@ -30,7 +30,7 @@
           <div class="dropdown" id="loginBox-position">
             <a href="#" id="drop-styles"><%= current_user ? "Account" : "Login" %></a>
             <div class="dropdown-content">
-              <%= link_to('My Page', current_user, 
+              <%= link_to('Profile', current_user, 
                 class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user 
               %>
               <%= link_to('Logout', destroy_user_session_path, 
