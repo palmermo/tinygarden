@@ -198,15 +198,15 @@ nav {
 
 /* ----------------- Home Welcome Block ----------------- */
 
-#welcome h1{
+#welcome h1 {
   margin-block-end: 1rem;
   color: rgb(0,146,122);
 }
-#welcome{
+#welcome {
   background-color: lightgray;
 }
 
-#welcome img{
+#welcome img {
   width:100%;
   height: 400px;
   position: fixed;
@@ -228,7 +228,7 @@ nav {
 
 /* ----------------- Buttons ----------------- */
 
-.btn-round{
+.btn-round {
   width: 260px;
   height: 50px;
   border-radius: 40px;
@@ -254,7 +254,6 @@ nav {
 }
 
 .Yellow a:visited{color: white;}
-
 
 .Red{
   background-color: transparent;
