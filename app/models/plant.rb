@@ -23,6 +23,8 @@ class Plant < ApplicationRecord
       maintenance: maintenance,
       light: light,
       category: category,
+      price: price,
+      sku: sku,
     }
   end
 end

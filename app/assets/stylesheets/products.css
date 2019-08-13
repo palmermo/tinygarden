@@ -7,3 +7,47 @@
   margin-top: 10.1%;
   margin-bottom: 7%;
 }
+
+.check-files {
+  display: block;
+}
+
+.filter-product-box {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.checkbox-layout div {
+  display: flex;
+  width: auto;
+  margin: 0px 1.6rem;
+}
+
+.checkbox-layout {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0 4rem;
+}
+
+.form-check-input {
+  position: relative;
+}
+
+.check-alignment {
+  align-items: center;
+}
+
+.check-alignment input {
+  margin-right: .7rem;
+}
+
+.filter-header {
+  justify-content: left;
+  border-bottom: 2px solid black;
+}
+
+.product-filter-header {
+  margin-bottom: 2rem;
+}
+
