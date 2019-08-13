@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'users/show'
   get '/design', to: 'static_pages#design', as: 'design'
   get '/care', to: 'static_pages#care', as: 'care'
+  get '/care/:doctor', to: 'static_pages#care', as: 'care_doctor'
   get '/cart', to: 'static_pages#cart', as: 'cart'
   get '/admin', to: 'static_pages#admin', as: 'admin'
   get '/sellable/:product_id', to: 'products#sellables', as: 'sellable'

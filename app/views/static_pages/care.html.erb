@@ -9,85 +9,13 @@
 
 <div class="care-sub-nav">
   <ul>
-    <li>ARTICLES</li>
-    <li>PLANT DOCTOR</li>
+    <li><%= link_to "ARTICLES", care_path%></li>
+    <li><%= link_to "PLANT DOCTOR", care_doctor_path(doctor:'doctor')%></li>
   </ul>
 </div>
 
-
-<div id="care-wrapper">
-  <article class="article">
-    <div class="plant-pic">
-      <%= image_tag 'article3.png', alt: 'article1'%>
-    </div>
-    <div class="care-tips">
-      <header class="title">
-        <p>Repot your plants like a pro</p>
-      </header>
-      <div class="care-tips" >
-        <p>Lorem Ipsum is simply dummy text of
-        the printing and typesetting industry.
-        Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of
-        type and scrambled it to make a type
-        specimen book.
-        </p>
-      </div>
-      <div class="read-more">
-        <p>Read more</p>
-      </div>
-    </div>
-  </article>
-  <article class="article">
-    <div class="plant-pic">
-      <%= image_tag 'article2.png', alt: 'article1'%>
-    </div>
-    <div class="care-tips">
-      <div class="title">
-        <p>Repot your plants like a pro</p>
-      </div>
-    </div>
-    <div class="care-tips">
-      <p>Lorem Ipsum is simply dummy text of
-      the printing and typesetting industry.
-      Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of
-      type and scrambled it to make a type
-      specimen book.
-      </p>
-    </div>
-    <div class="read-more">
-      <p>Read more</p>
-    </div>
-  </article>
-  <article class="article">
-    <div class="plant-pic">
-    <%= image_tag 'article3.png', alt: 'article3'%>
-    </div>
-    <div class="care-tips">
-      <div class="title">
-        <p>Repot your plants like a pro</p>
-      </div>
-      <div class="care-tips">
-        <p>Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry.
-          Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of
-          type and scrambled it to make a type
-          specimen book.
-        </p>
-      </div>
-      <div class="read-more">
-        <p>Read more</p>
-      </div>
-    </div>
-    </article>
-  <section class="section">
-    <p id="load-more">Load more</p>
-  </section>
-</div>
-
-
+<% if @doctor == true %>
+  <%= render 'doctor' %>
+<% else %>
+  <%= render 'articles' %>
+<% end %>
