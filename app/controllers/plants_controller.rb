@@ -45,9 +45,17 @@ class PlantsController < ApplicationController
     end
   end
 
+  def create
+    @plant = Plant.new
+  end
+
   private
 
   def set_plant
     @plant = Plant.find(params[:id])
+  end
+
+  def plants_params
+    params.require(:plant).permit(:size, :light, :maintenance, :category, :description, :product_id)
   end
 end

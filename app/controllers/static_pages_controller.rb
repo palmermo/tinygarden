@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
   # before_action :login_instagram, only: [:landing]
+  before_action :authenticate_user!, only: :admin
+  layout "admin", only: :admin
 
   def landing
     @plants = Plant.all
@@ -18,5 +20,13 @@ class StaticPagesController < ApplicationController
 
   def cart
     @cart_items = current_user.cart.cart_products.map(&:to_json)
+  end
+
+  def admin
+    if current_user.admin 
+      @product = Product.new
+    else 
+      redirect_to root_path
+    end
   end
 end
