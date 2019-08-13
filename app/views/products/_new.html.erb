@@ -1,0 +1,47 @@
+<%= form_with(model: @plant, local: true) do |form| %>
+  <div class="form-group col-md-3">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+  <div class="form-group col-md-3">
+    <%= form.label :size %>
+    <%= form.select :size, [0, 1, 2] %>    
+  </div>
+  <div class="form-group col-md-3">
+    <%= form.label :light %>
+    <%= form.select :light, [0, 1, 2] %>    
+  </div>
+  <div class="form-group col-md-3">
+    <%= form.label :maintenance %>
+    <%= form.select :maintenance, [0, 1, 2] %>    
+  </div>
+  <div class="form-group col-md-3">
+    <%= form.label :category %>
+    <%= form.select :category, [0, 1] %>    
+  </div>
+  <div class="form-group col-md-3">
+    <%= form.label :description %>
+    <%= form.text_field :description, class:"form-control" %>
+  </div>
+  <button type="submit"class="btn btn-primary">Submit</button>
+<% end %>
+
+<%#= form_with(model: @product, local: true) do |form| %>
+  <%# <div class="form-group col-md-3"> %>
+    <%#= form.label :sku %>
+    <%#= form.text_field :sku, class:"form-control" %>
+  <%# </div> %>
+  <%# <div class="form-group col-md-3"> %>
+    <%#= form.label :price %>
+    <%#= form.text_field :price, class:"form-control" %>
+  <%# </div> %>
+  <%# <div class="form-group col-md-3"> %>
+    <%#= form.select :sellable_type, ['Plant', 'Accessory']%>
+    <%#= form.check_box(:sellable_type) %>
+    <%#= form.label(:sellable_type, "Plant") %>
+    <%#= form.check_box(:sellable_type) %>
+    <%#= form.label(:sellable_type, "Accessory") %>
+  <%# </div> %>
+  <%#= form.hidden_field :sellable_id, value: @product, class:"form-control" %>
+  <%# <button type="submit" class="btn btn-primary">Submit</button> %>
+<%# end %>

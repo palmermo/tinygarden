@@ -1,5 +1,5 @@
 user = User.create(
-  name: "izzy", email: "izzy@email.com", password: "password"
+  name: "izzy", email: "izzy@email.com", password: "password", admin: true
 )
 
 Cart.create(

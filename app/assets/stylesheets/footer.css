@@ -1,15 +1,13 @@
 /* ----------------- Global Footer ----------------- */
 
 #general-footer{
-  grid-template-columns: 2fr 1fr;
-  display: grid;
   font-family: 'Lato', sans-serif;
   width: 100%;
   height: fit-content;
   background-color: rgb(28,81,81);
   color: white;
 }
-#general-footer .box{
+#general-footer .footer-box{
   grid-template-columns: 2fr 1fr;
   display: grid;
   margin: auto;
@@ -30,16 +28,16 @@
 }
 
 #general-footer img{
-  height: 60px;
-  width: 60px;
+  height: 50px;
   cursor: pointer;
-  margin: 5px;
+  margin: 10px;
 }
 
 #general-footer .footer-right{
   margin: auto 10%;
-  display: inline-flex;
-  flex-direction: row-reverse;
+  text-align: right;
+
+
 }
 
 @media only screen and (max-width: 600px) {
