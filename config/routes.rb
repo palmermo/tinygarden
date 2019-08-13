@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   get '/design', to: 'static_pages#design', as: 'design'
   get '/care', to: 'static_pages#care', as: 'care'
   get '/care/:doctor', to: 'static_pages#care', as: 'care_doctor'
+  get '/cart', to: 'static_pages#cart', as: 'cart'
 
   devise_for :users
 
-  resources :products, only: [:show, :index] do
-    resources :plants, only: [:show, :index]
-  end
+  resources :users, only: [:show]
+  resources :products, only: [:show, :index]
+  resources :plants, only: [:show, :index]
 
   get 'hello_world', to: 'hello_world#index'
 end
