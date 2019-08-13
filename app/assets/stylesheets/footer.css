@@ -1,15 +1,13 @@
 /* ----------------- Global Footer ----------------- */
 
 #general-footer{
-  grid-template-columns: 2fr 1fr;
-  display: grid;
   font-family: 'Lato', sans-serif;
   width: 100%;
   height: fit-content;
   background-color: rgb(28,81,81);
   color: white;
 }
-#general-footer .box{
+#general-footer .footer-box{
   grid-template-columns: 2fr 1fr;
   display: grid;
   margin: auto;
