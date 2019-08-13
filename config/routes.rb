@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/care/:doctor', to: 'static_pages#care', as: 'care_doctor'
   get '/cart', to: 'static_pages#cart', as: 'cart'
 
-  devise_for :users
+  devise_for :user
 
   resources :users, only: [:show]
   resources :products, only: [:show, :index]
