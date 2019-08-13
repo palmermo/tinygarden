@@ -7,7 +7,7 @@
   background-color: rgb(28,81,81);
   color: white;
 }
-#general-footer .box{
+#general-footer .footer-box{
   grid-template-columns: 2fr 1fr;
   display: grid;
   margin: auto;
