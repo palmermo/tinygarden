@@ -28,16 +28,16 @@
 }
 
 #general-footer img{
-  height: 60px;
-  width: 60px;
+  height: 50px;
   cursor: pointer;
-  margin: 5px;
+  margin: 10px;
 }
 
 #general-footer .footer-right{
   margin: auto 10%;
-  display: inline-flex;
-  flex-direction: row-reverse;
+  text-align: right;
+
+
 }
 
 @media only screen and (max-width: 600px) {
