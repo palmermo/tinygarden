@@ -102,6 +102,9 @@ background-color: white;
   transform: scale(1.1);
 }
 
+.add-to-space:focus {
+  outline: none;
+}
 .design-palette{
   display: flex;
   flex-wrap: wrap;
