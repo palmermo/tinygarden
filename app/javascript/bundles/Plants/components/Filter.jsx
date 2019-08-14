@@ -5,18 +5,20 @@ const Filter = ({ filterType, filterParams = [], handleClick }) => (
     <div className="filter-header">
       <h4>{filterType}</h4>
     </div>
-    {filterParams.map(({ value, label }) => (
-      <React.Fragment className="check-styles" key={label}>
-        <div className="check-alignment">
-          <input type="checkbox" value={value} onClick={() => handleClick(filterType, value)} />
-          <label for="exampleRadios1">
-            {label}
-          </label>
-        </div>
-        {/* <label>{label}</label>
-        <input type="checkbox" value={value} onClick={() => handleClick(filterType, value)} /> */}
-      </React.Fragment>
-    ))}
+    <div className="filter-list-items">
+      {filterParams.map(({ value, label }) => (
+        <React.Fragment key={label}>
+          <div className="check-alignment">
+            <input type="checkbox" value={value} onClick={() => handleClick(filterType, value)} />
+            <label htmlFor="exampleRadios1">
+              {label}
+            </label>
+          </div>
+          {/* <label>{label}</label>
+          <input type="checkbox" value={value} onClick={() => handleClick(filterType, value)} /> */}
+        </React.Fragment>
+      ))}
+    </div>
   </div>
 )
 

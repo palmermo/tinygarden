@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :testers
   root 'static_pages#landing'
   get '/oauth/callback', to: 'instagram#callback'
   get 'users/show'

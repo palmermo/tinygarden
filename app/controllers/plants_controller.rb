@@ -18,20 +18,15 @@ class PlantsController < ApplicationController
         { value: 2, label: 'hard' },
       ],
       [
-        { value: 0, label: 'houseplant' },
-        { value: 1, label: 'herb' },
+        { value: 0, label: 'herb' },
+        { value: 1, label: 'houseplant' },
       ]
     ]
-    has_params = params[:size] || params[:light] || params[:maintenance] || params[:category]
-    plants_by_size = params[:size] && Plant.by_size(params[:size].split(','))
-    plants_by_light = params[:light] && Plant.by_light(params[:light].split(','))
-    plants_by_maintenance = params[:maintenance] && Plant.by_maintenance(params[:maintenance].split(','))
-    plants_by_category = params[:category] && Plant.by_category(params[:category].split(','))
     @plants = Plant.all
-    filtered_plants = [plants_by_size, plants_by_light, plants_by_maintenance, plants_by_category]
-    .select { |plant| plant }
-    .reduce { |acc, plant| acc & plant }
-    @plants = has_params ? filtered_plants : Plant.all
+    @plants = @plants.by_size(params[:size]&.split(",")) if params[:size]&.split(",")&.any?
+    @plants = @plants.by_light(params[:light]&.split(",")) if params[:light]&.split(",")&.any?
+    @plants = @plants.by_maintenance(params[:maintenance]&.split(",")) if params[:maintenance]&.split(",")&.any?
+    @plants = @plants.by_category(params[:category]&.split(",")) if params[:category]&.split(",")&.any?
     respond_to do |format|
       format.html {}
       format.json { render json: { plants: @plants } }

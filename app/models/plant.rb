@@ -5,7 +5,7 @@ class Plant < ApplicationRecord
   enum size: ['small', 'meduim', 'large']
   enum light: ['low', 'partial', 'full']
   enum maintenance: ['easy', 'intermediate', 'hard']
-  enum category: ['houseplant', 'herb']
+  enum category: ['herb', 'houseplant']
 
   scope :by_size, -> (size) { where('size IN (?)', size) }
   scope :by_light, -> (light) { where('light IN (?)', light) }
@@ -18,7 +18,7 @@ class Plant < ApplicationRecord
     {
       name: name,
       description: description,
-      images: imgs,
+      imags: imgs,
       size: size,
       maintenance: maintenance,
       light: light,

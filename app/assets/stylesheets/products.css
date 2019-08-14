@@ -8,6 +8,23 @@
   margin-bottom: 7%;
 }
 
+.cards-filter {
+  height: 74% !important;
+  width: 23%;
+}
+
+.center-filter-items {
+  display: grid;
+}
+
+.plantlist-wrapper {
+  overflow: scroll;
+  height: 70vh;
+  width: 112vw;
+}
+
+.plantlist-wrapper::-webkit-scrollbar { width: 0 !important }
+
 .check-files {
   display: block;
 }
@@ -19,23 +36,33 @@
 }
 
 .checkbox-layout div {
-  display: flex;
+  display: block !important;
   width: auto;
-  margin: 0px 1.6rem;
+  margin: auto;
 }
 
 .checkbox-layout {
   display: inline-flex;
   flex-direction: row;
-  margin: 0 4rem;
+  margin: auto !important;
+  width: 62%;
 }
+
+.filter-list-items {
+  border-top: 2px solid black;
+}
+
+/* 
+.checkbox-layout div:first-of-type {
+  border-top: 2px solid black;
+} */
 
 .form-check-input {
   position: relative;
 }
 
 .check-alignment {
-  align-items: center;
+  margin-left: 0 !important;
 }
 
 .check-alignment input {
@@ -44,10 +71,20 @@
 
 .filter-header {
   justify-content: left;
-  border-bottom: 2px solid black;
 }
 
 .product-filter-header {
   margin-bottom: 2rem;
+}
+
+.plant-filter-image {
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hvrbox-width {
+  width: 100%;
 }
 

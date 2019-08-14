@@ -26,8 +26,8 @@ export const filters = [
   {
     filterType: 'category',
     filterParams:   [
-      { value: 0, label: 'houseplant' },
-      { value: 1, label: 'herb' },
+      { value: 0, label: 'herb' },
+      { value: 1, label: 'houseplant' },
     ]
   },
 ]
