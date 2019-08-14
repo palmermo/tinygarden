@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Tiny Garden | Admin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +18,8 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <span class="navbar-brand mb-0 h1">Navbar</span>
-      <%= link_to "Products", admin_products_path %>
+      <%= link_to "Products", admin_products_path, class: 'nav-link' %>
+      <%#= link_to "Blogs", admin_blogs_path, class: 'nav-link' %>
     </nav>
     <%= yield %>
 

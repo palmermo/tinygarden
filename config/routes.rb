@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :user
 
   resources :users, only: [:show]
-  resources :products, only: [:show, :index, :create]
+  resources :products
   resources :plants, only: [:show, :index, :create]
   resources :accessories, only: [:show, :index, :create]
 

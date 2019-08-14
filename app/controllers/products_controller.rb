@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  layout "admin", only: [:sellables, :admin_products]
+  layout "admin", only: [:sellables, :admin_products, :update, :edit, :create, :destroy]
 
   def index
     @plants = Plant.all
@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
     @plants = Plant.all
   end
 
+  # Admin actions
   def create
     @product = Product.new(product_params)
     respond_to do |format|
@@ -32,7 +33,13 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  private 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_back(fallback_location: admin_path)
+  end
+
+  private
 
   def product_params
     prams.require(:product).permit(:sku, :price)

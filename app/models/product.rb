@@ -3,6 +3,4 @@ class Product < ApplicationRecord
   has_many :cart_products
   has_many :reviews
   has_and_belongs_to_many :users
-
-
 end
