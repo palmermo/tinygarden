@@ -6,7 +6,7 @@ const Products = props => {
     <>
       <ul id="products-container">
         {
-          props.items.map((item, i) => {
+          props.items.map((item) => {
             return (
               <div key={item.id}>
                 <Product item={item} /> 

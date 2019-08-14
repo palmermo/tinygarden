@@ -6,7 +6,7 @@ const PlantList = ({ plants = [] }) => (
       plants.map((plant, i) => (
       <article className="cards cards-filter" key={i}>
         <div className="hvrbox hvrbox-width">
-          <img className="plant-filter-image" src="http://www.placepuppy.net/200/200" alt="product" key={i}/>
+          <img className="plant-filter-image" src="http://www.placepuppy.net/200/200" alt="${plant.name}" key={i}/>
           <div className="space-between">
           <h5 className="left">{plant.name}</h5>
             <h6 className="right">{plant.price}</h6>

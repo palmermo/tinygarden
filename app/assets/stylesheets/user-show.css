@@ -1,0 +1,47 @@
+#user-picture-background {
+  background-image: url(User-page-top.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: grid;
+}
+
+#user-picture-background h1 {
+  text-align: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.content-user-column {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.display-flex-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 30px 10px;
+}
+
+.purchase-history {
+
+}
+
+.profile-manage-reviews {
+
+}
+
+.edit-profile-section {
+
+}
+
+.purchase-history:hover,
+.profile-manage-reviews:hover,
+.edit-profile-section:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

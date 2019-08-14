@@ -14,17 +14,15 @@ class Plant < ApplicationRecord
 
   include Rails.application.routes.url_helpers
   def to_json(options={})
-    imgs = self.images.count > 0 ? self.images.map{ |img| rails_blob_path( img, only_path: true ) } : ['http://www.placepuppy.net/200/200']
+    images = self.images.count > 0 ? self.images.map{ |img| rails_blob_path( img, only_path: true ) } : ['http://www.placepuppy.net/200/200']
     {
       name: name,
       description: description,
-      imags: imgs,
+      images: images,
       size: size,
       maintenance: maintenance,
       light: light,
       category: category,
-      price: price,
-      sku: sku,
     }
   end
 end
