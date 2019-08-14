@@ -16,9 +16,9 @@ const Summary = props => {
         <hr className="summ-lines"/>
         <div>Estimated Shipping<span>{shipping / 100} $</span></div>
         <hr className="summ-lines-two"/>
-        <div>Estimated Tax<span>{taxAmmount} $</span></div>
+        <div>Estimated Tax<span>{taxAmmount.toFixed(2)} $</span></div>
         <hr id="total-line"/>
-        <div>Total<span>{total} $</span></div>
+        <div>Total<span>{total.toFixed(2)} $</span></div>
       </div>
       <button className="btnprimarycart">
         Check out
