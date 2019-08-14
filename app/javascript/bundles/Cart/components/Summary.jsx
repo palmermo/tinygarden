@@ -21,7 +21,7 @@ const Summary = props => {
         <div>Total<span>{total.toFixed(2)} $</span></div>
       </div>
       <button className="btnprimarycart">
-        Check out
+        <span>Check out</span>
       </button>
     </section>
   )
