@@ -33,11 +33,15 @@ class Plants extends Component {
   render() {
     const { plants } = this.state;
     return (
-      <div>
-        {
-        filters.map((filter, i) => <Filter key={`filter-${i}`} {...filter} handleClick={this.handleFilter}/>)
-        }
-        <PlantList plants={plants}/>
+      <div className="center-filter-items">
+        <div className="checkbox-layout">
+          {
+          filters.map((filter, i) => <div key={`filter-${i}`}><Filter {...filter} handleClick={this.handleFilter}/></div>)
+          }
+        </div>
+        <div className="plants-list">
+          <PlantList plants={plants}/>
+        </div>
       </div>
     )
   }

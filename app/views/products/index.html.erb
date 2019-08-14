@@ -1,3 +1,5 @@
 <div id="products-wrapper">
-  <%= react_component 'Plants', prerender: false %>
+  <h1 class="product-filter-header">Choose your Plant</h1>
+  <%= react_component 'Plants', props: { filters: @filters }, prerender: false %>
+  <%#= react_component 'Plants', prerender: false %>
 </div>
