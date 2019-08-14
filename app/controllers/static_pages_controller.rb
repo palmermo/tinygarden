@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   layout "admin", only: :admin
 
   def landing
-    @plants = Plant.all
+    @plants = Plant.limit(8)
     # @insta_feed = Instagram.client(:access_token => session[:access_token]).user_recent_media.shuffle.sample(4)
   end
 
