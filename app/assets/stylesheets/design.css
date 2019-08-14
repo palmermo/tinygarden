@@ -1,0 +1,172 @@
+.design-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffaf0;
+  background-position: center;
+  position: fixed;
+}
+
+.design-items{
+  margin-bottom: 10px;
+  width: 80vw;
+  height: 80vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 7%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.design-divider-1{
+padding-top: 40px;
+width: 24%;
+height: 89.6%;
+margin-left: auto;
+background-color: white;
+}
+
+.design-divider-2{
+  width: 50%;
+  margin-left: 10%;
+  margin-right: auto;
+  }  
+
+.design-add-plant{
+  font-family: Serif;
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.design-filters{
+  font-family: 'Lato';
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  height: 110px;
+}
+
+.design-results{
+  font-family: 'Lato';
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+  vertical-align: bottom;
+}
+
+#design-results-title{
+  text-align: center;
+  padding-top:25px; 
+}
+
+.design-plant-container{
+  height: 200px;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#design-snake{
+  background-image: url("snakeplant.png");
+  background-position: center; 
+  background-repeat: no-repeat;
+  margin-top: 4px;
+  height: 170px;
+  width:50%;
+  background-color: white;
+}
+
+#design-aloevera{
+  background-image: url("aloevera.png");
+  background-position: center; 
+  margin-top: 4px;
+  height: 170px;
+  width:50%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
+.add-to-space{
+  /* : lightgrey 3px solid; */
+  border-radius: 50px;
+  font-size: 20px;
+  width: 83%;
+  height: 45px;
+  color:lightgrey; 
+  font-family: 'Lato';
+  transition: 0.3s;
+}
+
+.add-to-space:hover{
+  transform: scale(1.1);
+}
+
+.add-to-space:focus {
+  outline: none;
+}
+.design-palette{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  height: 20%;
+  position:sticky;
+  margin-top: 94%;
+  text-align: center; 
+  margin-left: 30%;
+  height:7%;
+}
+
+.wall-color-text{
+  margin-top: 2%;
+  margin-right: auto;
+  margin-left: 30px;
+  font-family: 'Lato';
+}
+
+.palette-color{
+  width: 5%;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius:50%;
+}
+
+.palette-color:hover{
+border: lightcyan 0.3px solid; 
+}
+
+#muzli{
+  background-color: #fde5db;
+  margin: 7px;
+}
+
+#braden{
+  background-color: #fffaf0;
+  margin: 7px;
+}
+
+#phoca{
+  background-color: #ebf9f6;
+  margin: 7px;
+
+}
+
+#pantone{
+  background-color: #ff6666;
+  margin: 7px;
+
+}
+
+#dizark{
+  background-color: #009579;
+  margin: 7px;
+}
+
+#design-plant-title{
+  margin-top: 105%;
+  margin-left: 16%;
+  font-family: 'Lato';
+  width: 70%;
+  text-align: left;
+}
