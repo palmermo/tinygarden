@@ -19,7 +19,7 @@ const PlantList = ({ plants = [] }) => (
             </div>
           </div>
         </div>
-        <button className ="btn-round red">
+        <button className ="btn-round red filter-red-bttn">
         Add to Cart
         </button>
       </article>

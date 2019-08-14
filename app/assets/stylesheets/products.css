@@ -10,7 +10,7 @@
 
 .cards-filter {
   height: 74% !important;
-  width: 23%;
+  width: 20%;
 }
 
 .center-filter-items {
@@ -85,6 +85,10 @@
 }
 
 .hvrbox-width {
+  width: 100%;
+}
+
+.filter-red-bttn {
   width: 100%;
 }
 
