@@ -93,8 +93,8 @@
 }
 
 .title {
-  margin: 0;
-  padding: 0;
+  margin-right: 4%;
+  margin-bottom: 0;
 }
 
 .dropdown {
@@ -114,6 +114,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   line-height: 2rem;
+  font-size: medium;
   z-index: 1;
   top: 2.7rem;
   right: 0rem;
