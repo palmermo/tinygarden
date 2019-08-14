@@ -48,7 +48,9 @@
               %>
             </div>
           </div>
-          <span id="cart" ><%= link_to "Cart", cart_path, class: params[:action] == 'cart' ? 'nav-active' : ''
+          <span id="cart" >
+          <%= link_to image_tag("cart.png"), cart_path, 
+            class: params[:action] == 'cart' ? 'nav-active' : ''
           %></span>
         </div>
       </div>
