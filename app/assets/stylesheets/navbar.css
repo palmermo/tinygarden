@@ -68,6 +68,11 @@
   transform: scale(0, 1);
   transition: color 0.1s,transform 0.2s ease-out;
 }
+
+#navbar a:active {
+  width: auto;
+}
+
 #navbar a.nav-active {
   content: '';
   display: block;
@@ -77,7 +82,7 @@
   margin-top: 12.8%;
   bottom: 0.26rem;
   left: 0;
-  width: 73%;
+  width: auto;
   height: 100%;
   border-bottom: 3px solid black;
   transition: color 0.1s,transform 0.2s ease-out;
@@ -182,6 +187,8 @@
 #cart a.nav-active {
   display: grid;
   place-items: center;
+  position: relative;
+  bottom: 0.3vh;
   height: 6.22vh;
   margin: 0;
 }
