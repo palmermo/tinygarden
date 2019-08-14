@@ -1,4 +1,55 @@
-<section id="design-wrapper">
-  <h1>Design</h1>
+<section class= "design-wrapper">
+  <div id="config-wrapper" class= "design-items">
+    <section class="design-divider-2">
+      <div class= "design-palette">
+        <div class="wall-color-text"> Change wall color </div>
+        <div id="dizark" onclick="btnDizark()" class="palette-color"></div>
+        <div id="pantone" onclick="btnPantone()"class="palette-color"></div>
+        <div id="braden" onclick="btnBraden()" class="palette-color"></div>
+        <div id="phoca" onclick="btnPhoca()" class="palette-color"></div>
+        <div id="muzli" onclick="btnMuzli()" class="palette-color"></div>
+      </div>  
+    </section>  
+    <section class= "design-divider-1">
+      <div class= "design-add-plant">
+        Add a plant
+      </div>
+      <div class= "design-filters">
+        Filters go here
+      </div>
+      <div id="design-results-title">Results</div>
+      <div class= "design-plant-container">
+        <div id="design-snake"> 
+          <section id="design-plant-title"> Snake Plant <br/> $20
+          </section>
+        </div>
+        <div id="design-aloevera">
+          <section id="design-plant-title">  Aloe Vera <br/> $15
+          </section> 
+        </div>
+       </div>
+       <div class= "design-add-plant">
+         <button class="add-to-space" onclick="btnRed()" type="button">Add to space</button>
+       </div>
+     </section>
+  </div>
 </section>
+
+<script>
+  function btnDizark() {
+    document.getElementById("config-wrapper").style.backgroundColor="#009579";
+}
+  function btnPantone() {
+    document.getElementById("config-wrapper").style.backgroundColor="#ff6666";
+}
+  function btnPhoca() {
+    document.getElementById("config-wrapper").style.backgroundColor="#ebf9f6";
+}
+  function btnBraden() {
+    document.getElementById("config-wrapper").style.backgroundColor="#fffaf0";
+}
+  function btnMuzli() {
+    document.getElementById("config-wrapper").style.backgroundColor="#fde5db";
+}
+</script>
 
