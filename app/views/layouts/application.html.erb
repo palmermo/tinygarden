@@ -23,9 +23,9 @@
           <li><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
           <li><%= link_to "Design", design_path, class: params[:action] == 'design' ? 'nav-active' : '' %></li>
         </ul>
-        <ul class="title">
-          <li class="animated bounce"><%= link_to 'Tiny Garden', root_path %></li>
-        </ul>
+        <div class="animated bounce title">
+          <%= link_to 'Tiny Garden', root_path %>
+        </div>
         <div class="right-side-nav">
           <div class="dropdown" id="loginBox-position">
             <a href="#" id="drop-styles"><%= current_user ? "Account" : "Login" %></a>
