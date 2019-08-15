@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
-  before_action :set_plant, only: [:show]
+  before_action :set_plant, only: [:show, :edit]
+  layout "admin", only: :new
   def index
     @filters = [ # TODO: need to get filter values from Model. Like: Plant.categories
       [
@@ -40,8 +41,21 @@ class PlantsController < ApplicationController
     end
   end
 
-  def create
+  def new
     @plant = Plant.new
+  end
+
+  def create
+    @plant = Plant.new(plant_params)
+    if @plant.save
+      Product.create(product_params.merge({sellable_type: 'Plant', sellable_id: @plant.id}))
+      redirect_to admin_products_path
+    else
+      render 'new'
+    end
+  end
+
+  def edit
   end
 
   private
@@ -50,7 +64,14 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
   end
 
-  def plants_params
-    params.require(:plant).permit(:size, :light, :maintenance, :category, :description, :product_id)
+  def plant_params
+    ['size', 'light', 'maintenance', 'category'].each do |attr|
+      params[:plant][attr] = params[:plant][attr].to_i
+    end
+    params.require(:plant).permit(:name, :size, :light, :maintenance, :category, :description, :images => [])
+  end
+
+  def product_params
+    params.require(:plant).permit(:amount, :sku, :price)
   end
 end

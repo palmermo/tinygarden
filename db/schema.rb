@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2019_08_14_161036) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "sellable_type", null: false
     t.bigint "sellable_id", null: false
-    t.integer "amount"
+    t.integer "amount", default: 0
     t.index ["sellable_type", "sellable_id"], name: "index_products_on_sellable_type_and_sellable_id"
   end
 
