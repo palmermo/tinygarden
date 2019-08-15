@@ -21,7 +21,9 @@
 
 /*  PRODUCTS  */
 
-#products-container::-webkit-scrollbar { width: 0 !important }
+#products-container::-webkit-scrollbar { 
+  width: 0 !important; 
+}
 
 #products-container {
   width: 36%;
@@ -108,7 +110,7 @@
   justify-content: space-between;
 }
 
-#total-line{
+#total-line {
   height: 4px;
   background-color: black;
 }
