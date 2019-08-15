@@ -176,7 +176,9 @@
   margin: 0;
 }
 
-#cart a:link, a:visited, a:active {
+#cart a:link,
+#cart a:visited, 
+#cart a:active {
   width: 3.3vw;
   display: flex;
   justify-content: center;
