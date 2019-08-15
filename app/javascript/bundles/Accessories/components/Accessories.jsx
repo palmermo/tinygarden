@@ -4,7 +4,7 @@ export class AccessoryList extends Component {
   render() {
     return (
       <div>
-
+        accs
       </div>
     );
   }

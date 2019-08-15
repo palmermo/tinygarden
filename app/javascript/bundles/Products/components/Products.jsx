@@ -1,9 +1,10 @@
-import React from 'react';
-import PlantList from '../../Plants/components/PlantList'
-import AccessoryList from '../../AccessoryList/components/AccessoryList'
+import React, {Component} from 'react';
+import Plants from '../../Plants/components/Plants'
+import Accessories from '../../Accessories/components/Accessories'
 
-span = {
-  cursor: 'pointer'
+const span = {
+  cursor: 'pointer',
+  marginLeft: '2rem'
 }
 
 export class Products extends Component {
@@ -19,11 +20,10 @@ export class Products extends Component {
     return (
       <div>
         <header>
-          <h1 class="product-filter-header">
+          <h1 className="product-filter-header" style={ {textAlign: 'center'} }>
             <span onClick={this.handleClick} style={span}>
               Plants
             </span>
-            |
             <span onClick={this.handleClick} style={span}>
               Accessories
             </span>
@@ -31,7 +31,7 @@ export class Products extends Component {
 
         </header>
         {
-          this.state.visible === 'Plant' ? <PlantList /> : <AccessoryList />
+          this.state.visible === 'Plants' ? <Plants /> : <Accessories />
         }
       </div>
     );

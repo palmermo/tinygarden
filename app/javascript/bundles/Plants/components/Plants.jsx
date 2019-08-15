@@ -24,7 +24,7 @@ class Plants extends Component {
 
   handleFilter = (type, value) => {
     const filters = this.state.filters[type]
-    const updatedFilter = filters.includes(value) 
+    const updatedFilter = filters.includes(value)
       ? filters.filter(currentFilter => currentFilter !== value)
       : [...filters, value]
     this.setState({ filters: { ...this.state.filters, [type]: updatedFilter }}, this.fetchPlants)
