@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   layout "admin", only: [:new, :admin_products, :update, :edit, :create, :destroy]
 
   def index
-    @plants = Plant.all
+    @products = Product.all
   end
 
   def show
