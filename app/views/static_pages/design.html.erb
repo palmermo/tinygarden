@@ -1,37 +1,51 @@
 <section class= "design-wrapper">
   <div id="config-wrapper" class= "design-items">
-    <section class="design-divider-2">
-      <div class= "design-palette">
-        <div class="wall-color-text"> Change wall color </div>
+    <div class="design-divider-1">
+      <div class="configurator-design">
+        <div class="center-elements">
+          <div class="image-design-1">
+            <%= image_tag 'Design/TinyGarden-Configurator-01.png', alt: 'hey'%>
+          </div>
+        </div>
+        <div class="center-elements">
+          <div class="image-design-2">
+            <%= image_tag 'Design/TinyGarden-Configurator-02.png', alt: 'hey'%>
+          </div>
+        </div>
+        <div class="center-elements">
+          <div class="image-design-3">
+            <%= image_tag 'Design/TinyGarden-Configurator-03.png', alt: 'hey'%>
+          </div>
+        </div>
+        <div class="center-elements">
+          <div class="image-design-4">
+            <%= image_tag 'Design/TinyGarden-Configurator-04.png', alt: 'hey'%>
+          </div>
+        </div>
+      </div>
+    <div class= "design-palette">
+      <div class="wall-color-text"> Background color </div>
         <div id="dizark" onclick="btnDizark()" class="palette-color"></div>
         <div id="pantone" onclick="btnPantone()"class="palette-color"></div>
         <div id="braden" onclick="btnBraden()" class="palette-color"></div>
         <div id="phoca" onclick="btnPhoca()" class="palette-color"></div>
         <div id="muzli" onclick="btnMuzli()" class="palette-color"></div>
-      </div>  
-    </section>  
-    <section class= "design-divider-1">
+      </div>
+    </div>
+    <div class= "design-divider-2">
       <div class= "design-add-plant">
-        Add a plant
+        Drag & Drop your plant!
       </div>
       <div class= "design-filters">
         Filters go here
       </div>
-      <div id="design-results-title">Results</div>
-      <div class= "design-plant-container">
-        <div id="design-snake"> 
-          <section id="design-plant-title"> Snake Plant <br/> $20
-          </section>
+      <div class="design-results-title">
+        Results
+        <div class="addplant-btn">
+          <button class="add-to-space" onclick="btnRed()" type="button">Add to cart</button>
         </div>
-        <div id="design-aloevera">
-          <section id="design-plant-title">  Aloe Vera <br/> $15
-          </section> 
-        </div>
-       </div>
-       <div class= "design-add-plant">
-         <button class="add-to-space" onclick="btnRed()" type="button">Add to space</button>
-       </div>
-     </section>
+      </div>
+    </div>
   </div>
 </section>
 
