@@ -1,5 +1,5 @@
 class Plant < ApplicationRecord
-  has_one :products, as: :sellable
+  has_one :products, as: :sellable, dependent: :destroy
   has_many_attached :images
 
   enum size: ['small', 'meduim', 'large']
