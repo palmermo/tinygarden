@@ -1,6 +1,6 @@
 import React from 'react'
-import article2 from '/Users/matthewpalmer/Desktop/C34_matthew_raphael_tim/app/assets/images/article2.png'
-import article3 from '/Users/matthewpalmer/Desktop/C34_matthew_raphael_tim/app/assets/images/article3.png'
+// import article2 from '/Users/matthewpalmer/Desktop/C34_matthew_raphael_tim/app/assets/images/article2.png'
+// import article3 from '/Users/matthewpalmer/Desktop/C34_matthew_raphael_tim/app/assets/images/article3.png'
 
 
 
@@ -9,7 +9,7 @@ const Articles = () => {
     <>
       <article className="article">
         <div className="plant-pic">
-          <img src={article2} alt='article'/>
+          <img src="article2.png" alt='article'/>
         </div>
       <div className="care-tips">
         <header className="title">
@@ -32,7 +32,7 @@ const Articles = () => {
       </article>
       <article className="article">
         <div className="plant-pic">
-        <img src={article3} alt='article'/>
+          <img src="article3.png" alt='article'/>
         </div>
         <div className="care-tips">
           <div className="title">
