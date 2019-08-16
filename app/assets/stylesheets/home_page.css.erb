@@ -1,3 +1,4 @@
+<style>
 /* ----------------- General homepage ----------------- */
 
 .homepage-general button {
@@ -23,7 +24,7 @@
 }
 
 #welcome .background-welcome {
-  background-image: url(Header.png);
+  background-image: url(<%= asset_path('Header.png') %>);
   background-position: center;
   background-size: cover;
   margin: 0 auto;
@@ -455,3 +456,5 @@ z-index: 5;
     background-size: 80%;
   }
 }
+
+</style>
