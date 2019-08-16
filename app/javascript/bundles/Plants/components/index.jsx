@@ -5,21 +5,24 @@ import Filter from './Filter'
 import { filters } from './utils'
 
 class Plants extends Component {
-  state = { plants: [], filters: { size: [], light: [], maintenance: [], category: [] } }
+  state = { plants: [], 
+    filters: { size: [], light: [], maintenance: [], category: [] },
+  }
+
   componentDidMount() {
     this.fetchPlants()
   }
 
   fetchPlants = () => {
-  const { filters } = this.state;
-  const searchParams = ['size', 'light', 'maintenance', 'category'].reduce((acc, filterType) => {
-    const filter = filters[filterType] || [];
-    if (!filter.length) return acc;
-    const filterParams = `${filterType}=${filter.join(',')}`;
-    return acc ? `${acc}&${filterParams}` : filterParams;
-  }, '');
-  const url = searchParams ? `/plants.json?${searchParams}` : '/plants.json';
-  axios.get(url).then(({ data }) => this.setState({ plants: data.plants }));
+    const { filters } = this.state;
+    const searchParams = ['size', 'light', 'maintenance', 'category'].reduce((acc, filterType) => {
+      const filter = filters[filterType] || [];
+      if (!filter.length) return acc;
+      const filterParams = `${filterType}=${filter.join(',')}`;
+      return acc ? `${acc}&${filterParams}` : filterParams;
+    }, '');
+    const url = searchParams ? `/plants.json?${searchParams}` : '/plants.json';
+    axios.get(url).then(({ data }) => this.setState({ plants: data.plants }));
   };
 
   handleFilter = (type, value) => {
