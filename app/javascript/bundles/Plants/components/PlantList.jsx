@@ -3,23 +3,27 @@ import Modal from './Modal';
 
 class PlantList extends Component {
   state = {
-    modalOpen: false
+    modalOpen: false,
+    plant: {}
   }
   
   componentDidMount() {
     console.log(this.state)
   }
   
-  handleClick = _ => this.setState({ modalOpen: true });
+  handleClick = plant => {
+    this.setState({ plant, modalOpen: true })
+  }
+
   toggleModal = _ => this.setState(prevState => ({ modalOpen: !prevState.modalOpen }));
   
   render() {
-    const { modalOpen } = this.state;
+    const { modalOpen, plant } = this.state;
     return(
       <div className="shopfeatprod plantlist-wrapper">
         {
           this.props.plants.map((plant, i) => (
-            <article onClick={this.handleClick} className="cards cards-filter" key={i}>
+            <article onClick={() => this.handleClick(plant)} className="cards cards-filter" key={i}>
               <div className="hvrbox hvrbox-width">
                 <img className="plant-filter-image" src="http://www.placepuppy.net/200/200" alt="${plant.name}" key={i}/>
                 <div className="space-between">
@@ -42,7 +46,7 @@ class PlantList extends Component {
         }
         <Modal
           isOpen={modalOpen}
-          modalContent="This is an example modal"
+          modalContent={plant}
           actions={[{ label: 'Close', onClick: this.toggleModal }]}
         />
       </div>
