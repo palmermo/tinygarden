@@ -130,6 +130,7 @@
   color: black;
   margin: 50px 0;
   font-size: 27px;
+  font-family: 'Lato'
 }
 
 .blacks:visited {
@@ -448,6 +449,8 @@ z-index: 5;
   padding: 0.3rem;
   font-weight: lighter;
 }
+
+/* ------------------------------social media------------------------------- */
 
 
 @media (max-width: 600px) {
