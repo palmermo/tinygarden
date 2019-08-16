@@ -56,28 +56,28 @@
 }
 
 .image-design-1{
-  background-image: url(Design/TinyGarden-Configurator-13.png);
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-13.png);
   position: center;
   opacity: 1;
   background-repeat: no-repeat;
 }
 
 .image-design-2{
-  background-image: url(Design/TinyGarden-Configurator-14.png);
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-14.png);
   position: center;
   opacity: 1;
   background-repeat: no-repeat;
 }
 
 .image-design-3{
-  background-image: url(Design/TinyGarden-Configurator-15.png);
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-15.png);
   position: center;
   opacity: 1;
   background-repeat: no-repeat;
 }
 
 .image-design-4{
-  background-image: url(Design/TinyGarden-Configurator-16.png);
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-16.png);
   position: center;
   opacity: 1;
   background-repeat: no-repeat;
@@ -131,7 +131,7 @@
 }
 
 .design-snake {
-  background-image: url("snakeplant.png");
+  background-image: url("http://tinygarden-bucket.herokuapp.com/images/snakeplant.png");
   background-position: center; 
   background-repeat: no-repeat;
   margin-top: 4px;
@@ -141,7 +141,7 @@
 }
 
 .design-aloevera {
-  background-image: url("aloevera.png");
+  background-image: url("http://tinygarden-bucket.herokuapp.com/images/aloevera.png");
   background-position: center; 
   margin-top: 4px;
   height: 170px;

@@ -13,7 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-label {
-  margin-bottom: 0 !important;
-}
