@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react'
+import axios from 'axios'
 import FeaturedProducts from 'FeaturedProducts'
-// import { filters } from './utils'
 
 class FeaturedList extends Component {
-  state = { plants: [], filters: { size: [], light: [], maintenance: [], category: [] } }
+  state = { plants: [], 
+  filters: { size: [], light: [], maintenance: [], category: [] }, 
+  }
+
   componentDidMount() {
     this.fetchPlants()
   }
@@ -20,14 +22,6 @@ class FeaturedList extends Component {
   const url = searchParams ? `/plants.json?${searchParams}` : '/plants.json';
   axios.get(url).then(({ data }) => this.setState({ plants: data.plants }));
   };
-
-  // handleFilter = (type, value) => {
-  //   const filters = this.state.filters[type]
-  //   const updatedFilter = filters.includes(value)
-  //     ? filters.filter(currentFilter => currentFilter !== value)
-  //     : [...filters, value]
-  //   this.setState({ filters: { ...this.state.filters, [type]: updatedFilter }}, this.fetchPlants)
-  // }
 
   render() {
     const { plants } = this.state;
