@@ -1,3 +1,5 @@
+
+
 .c-modal-cover {
   position: fixed;
   top: 0;
@@ -17,8 +19,24 @@
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.modalHeader h3 {
+  font-size: 3.8vh;
+  font-family: Serif;
+}
+
 .modalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin: 0 auto;
+  height: 21%;
+  width: 100%;
+  border-bottom: .1em solid black;
+}
+
+.back-arrow {
+  margin-top: 0.6vh;
+  height: 2.2rem;
 }
 
 .c-modal {
@@ -28,7 +46,7 @@
   width: 98%;
   height: 99%;
   border-radius: 5px;
-  padding: 2.5em 1.5em 1.5em 1.5em;
+  padding: 2em 1.5em 1.5em 1.5em;
   background-color: #ffffff;
   box-shadow: 0 0 10px 3px rgba(55, 71, 79, 0.3);
   overflow-y: auto;

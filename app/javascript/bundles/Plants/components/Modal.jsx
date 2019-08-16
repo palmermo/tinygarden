@@ -8,7 +8,11 @@ const Modal = ({ isOpen, modalContent, actions = [] }) =>
         <div className="c-modal slideIn">
           <div className="modalWrapper">
             <div className="modalHeader">
-              <i className="icn-person material-icons"></i>
+              <img src="https://img.icons8.com/ios-filled/25/000000/double-left.png" className="back-arrow"/>
+              <h3 className="icn-person material-icons animated bounce">Tiny Garden</h3>
+              <div>
+                Cart
+              </div>
             </div>
             <div className="c-modal_body">
               <div className="plant-modal">
@@ -16,8 +20,8 @@ const Modal = ({ isOpen, modalContent, actions = [] }) =>
                 <p>{modalContent.size}</p>
               </div>
             </div>
-            {actions.map(({ label, onClick }) => (
-              <button className="btn btn-info" onClick={onClick}>
+            {actions.map(({ label, onClick, i }) => (
+              <button className="btn btn-info" onClick={onClick} key={modalContent.name}>
                 {label}
               </button>
             ))}

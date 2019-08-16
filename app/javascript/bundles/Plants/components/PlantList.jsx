@@ -7,10 +7,6 @@ class PlantList extends Component {
     plant: {}
   }
   
-  componentDidMount() {
-    console.log(this.state)
-  }
-  
   handleClick = plant => {
     this.setState({ plant, modalOpen: true })
   }
@@ -53,6 +49,5 @@ class PlantList extends Component {
     )
   }
 }
-
 
 export default PlantList
