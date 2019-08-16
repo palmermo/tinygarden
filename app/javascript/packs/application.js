@@ -27,8 +27,16 @@ const navScroll = () => {
   })
 }
 
+const switchClick = () => {
+  const subnav1 = document.getElementById("subnav1")
+  subnav1.addEventListener('click', function () {
+    subnav1.classList.add(".orange")
+  })
+}
+
 const executeScripts = () => {
   navScroll()
+  switchClick()
 }
 
 ['ready', 'turbolinks:load'].forEach( event => {

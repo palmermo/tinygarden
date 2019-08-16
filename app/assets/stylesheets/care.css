@@ -1,37 +1,59 @@
 
 .care-header{
-  height: 530px;
+  height: 49.6vh;
   background-image: url("careheader.png");
   background-size: 100%; 
   background-repeat: repeat-x
 }
-#top-ten{
+#top-ten {
   padding-top: 15rem;
 }
-.title-header{
+
+.title-header {
   margin-left: 10rem;
   font-family: serif; 
   font-size: 35px;
   font-size: 5vh
 }
-.care-sub-nav ul {
+
+#care-sub-nav {
+  margin-top: 1%;
+}
+
+#care-sub-nav #sub-cont {
   list-style: none;
   text-align: center;
 }
-.care-sub-nav ul li {
+#care-sub-nav #sub-cont #subnav1,
+#care-sub-nav #sub-cont #subnav2 {
   display: inline-block;
-  margin-right: 150px;
-  margin-left: 150px;
+  width: 50%;
+  height: 10.3vh;
   color: grey;
+  border-bottom: solid 1.7vh;
   font-family: 'Lato', sans-serif;
   font-size: 22px;
-  font-weight: bold;	
+  font-weight: bold;
   letter-spacing: 0.27px;
 }
-.care-sub-nav ul li:hover {
+
+.orange {
+  color: #FFB400;
+  border: 1px solid black;
+}
+
+#care-sub-nav #sub-cont #subnav1:hover,
+#care-sub-nav #sub-cont #subnav2:hover {
+  cursor: pointer;
+}
+
+
+#care-sub-nav #sub-cont ,
+#care-sub-nav #sub-cont {
   color:#FFB400;
   cursor: pointer;
 }
+
 #care-header{
   height: 473px;
   width: 100vw;
@@ -78,4 +100,20 @@
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+
+.articles-true {
+  color:#FFB400;  
+}
+
+.acticles-false {
+  color: grey;
+}
+
+.doctor-true {
+  color:#FFB400;
+}
+
+.doctor-false {
+  color: grey;
 }

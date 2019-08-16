@@ -6,15 +6,5 @@
   </div>
 </header>
 
-<div class="care-sub-nav">
-  <ul>
-    <li><%= link_to "ARTICLES", care_path%></li>
-    <li><%= link_to "PLANT DOCTOR", care_doctor_path(doctor:'doctor')%></li>
-  </ul>
-</div>
+<%= react_component 'CarePage', prerender: false %> 
 
-<% if @doctor == true %>
-  <%= render 'doctor' %>
-<% else %>
-  <%= render 'articles' %>
-<% end %>
