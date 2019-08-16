@@ -9,7 +9,7 @@ const Articles = () => {
     <>
       <article className="article">
         <div className="plant-pic">
-          <img src="article2.png" alt='article'/>
+          <img src="http://tinygarden-bucket.herokuapp.com/images/article2.png" alt='article'/>
         </div>
       <div className="care-tips">
         <header className="title">
@@ -32,7 +32,7 @@ const Articles = () => {
       </article>
       <article className="article">
         <div className="plant-pic">
-          <img src="article3.png" alt='article'/>
+          <img src="http://tinygarden-bucket.herokuapp.com/images/article3.png" alt='article'/>
         </div>
         <div className="care-tips">
           <div className="title">
@@ -55,7 +55,7 @@ const Articles = () => {
       </article>
       <article className="article">
         <div className="plant-pic">
-        <img src={article2} alt='article 3'/>
+        <img src='http://tinygarden-bucket.herokuapp.com/images/article2.png' alt='article 3'/>
         </div>
       <div className="care-tips">
         <div className="title">

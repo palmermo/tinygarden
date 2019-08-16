@@ -14,7 +14,7 @@ class Plant < ApplicationRecord
 
   include Rails.application.routes.url_helpers
   def to_json(options={})
-    images = self.images.count > 0 ? self.images.map{ |img| rails_blob_path( img, only_path: true ) } : ['http://www.placepuppy.net/200/200']
+    images = self.images.count > 0 ? self.images.map{ |img| rails_blob_path( img, only_path: true ) } : ['http://tinygarden-bucket.herokuapp.com/images/aloe.png']
     {
       name: name,
       description: description,
