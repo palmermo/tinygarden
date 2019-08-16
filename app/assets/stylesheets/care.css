@@ -1,7 +1,7 @@
 
 .care-header{
   height: 49.6vh;
-  background-image: url("careheader.png");
+  background-image: url("http://tinygarden-bucket.herokuapp.com/images/careheader.png");
   background-size: 100%; 
   background-repeat: repeat-x
 }

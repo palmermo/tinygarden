@@ -1,5 +1,5 @@
 #user-picture-background {
-  background-image: url(User-page-top.jpeg);
+  background-image: url('http://tinygarden-bucket.herokuapp.com/images/User-page-top.jpeg');
   background-position: center;
   background-size: cover;
   width: 100%;

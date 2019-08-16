@@ -23,7 +23,7 @@
 }
 
 #welcome .background-welcome {
-  background-image: url(<%= asset_path('Header.png') %>);
+  background-image: url('http://tinygarden-bucket.herokuapp.com/images/Header.png');
   background-position: center;
   background-size: cover;
   margin: 0 auto;
@@ -273,7 +273,7 @@ z-index: 5;
 
 #how-it-works .gif-background {
   background-color: rgb(253,231,222);
-  background-image: url(https://files.slack.com/files-pri/T055GEHEJ-FM97G7GES/tiny-garden-how-it-works.gif);
+  background-image: url('https://files.slack.com/files-pri/T055GEHEJ-FM97G7GES/tiny-garden-how-it-works.gif');
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50%;
@@ -296,7 +296,7 @@ z-index: 5;
 /* ----------------- Why Plants ----------------- */
 
 .background-why-plants {
-  background-image: url(blackwoman.png);
+  background-image: url('http://tinygarden-bucket.herokuapp.com/images/blackwoman.png');
   background-position: center;
   background-size: cover;
   margin: 0 auto;
