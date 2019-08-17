@@ -8,20 +8,20 @@
   font-family: 'Serif';
   text-align: center;
   height: 70px;
-  margin-top: 30px;
+  margin-top: 57px;
 }
 
 .box-container-1{
-  display:flex;
-  height: 600px;
+  display:grid;
+  height: 61vh;
   margin-top: 15px;
   margin-left:15%;
   margin-right:15%;
 }
 
 .box-container-2{
-  display:flex;
-  height: 600px;
+  display:grid;
+  height: 61vh;
   margin-top: -130px;
   margin-left:15%;
   margin-right:15%;
@@ -40,27 +40,45 @@
 
 #box-1{
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/paleleaf.png");;
+  height: 392px;
+  width: 450px;
 }
+
 #box-2{
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/droopyleaf.png");
-
+  height: 392px;
+  width: 450px;
 }
+
 #box-3{
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/brownleaf.png");
+  height: 392px;
+  width: 450px;
 }
+
 #box-4{
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/blackspotleaf.png");
+  height: 392px;
+  width: 450px;
 }
+
 #box-5{
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/lightgrowleaf.png");
+  height: 392px;
+  width: 450px;
 }
+
 #box-6{
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/brownleaf.png");
+  height: 392px;
+  width: 450px;
 }
+
 .ailment{
   margin: 70px;
   border: 5px solid transparent;
   font-size: 30px;
+
 }
 
 
