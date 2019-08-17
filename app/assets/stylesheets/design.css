@@ -1,3 +1,4 @@
+/* ----------- Global Styling ----------- */
 .design-wrapper {
   width: 100vw;
   height: 100vh;
@@ -11,9 +12,65 @@
   height: 100vh;
 }
 
+/* ----------- Configurator ----------- */
+
 .design-divider-1 {
   width: 70%;
-  }
+}
+
+.configurator-design {
+  height: 80vh;
+  margin-top: 6rem;
+  display: grid;
+  grid-template:
+    '. . . . . . . h h .'
+    '. s s s s s . h h .'
+    '. s s s s s . h h .'
+    '. s s s s s . h h .'
+    '. . . . . . . . . .'
+    '. . . . k k . t t .'
+    '. . . . p p . t t .'
+    '. . . . p p . t t .';
+  grid-gap: 5px;
+  width: 100%;
+}
+
+#image-design-1 { grid-area: s; display: block; padding: 10%;}
+#image-design-2 { grid-area: h; display: block; padding: 10%;}
+#image-design-3 { grid-area: t; display: block; padding: 10%;}
+#image-design-4 { grid-area: p; display: block; padding: 10%;}
+#image-design-5 { grid-area: k; display: block; padding: 10%;}
+
+#image-design-1 img,
+#image-design-2 img,
+#image-design-3 img,
+#image-design-4 img,
+#image-design-5 img {
+  display: block;
+  position: absolute;
+}
+.snake-plant-config{
+  z-index: -1;
+}
+
+.shelf-op0 { opacity: 0; transition: 0.2s;}
+.shelf-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.hangingplant-op0 { opacity: 0; transition: 0.2s;}
+.hangingplant-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.table-op0 { opacity: 0; transition: 0.2s;}
+.table-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.shortpot-op0 { opacity: 0; transition: 0.2s;}
+.shortpot-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.shelf-op1 { opacity: 1;}
+.hangingplant-op1 { opacity: 1;}
+.table-op1 { opacity: 1;}
+.shortpot-op1 { opacity: 1;}
+
+/* ----------- Side Bar ----------- */
 
 .design-divider-2 {
   margin-top: 7rem;
@@ -25,75 +82,6 @@
   align-content: space-between;
   border-radius: 20px 0px 0px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.configurator-design {
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
-  height: 80vh;
-  margin-top: 6rem;
-  display: grid;
-  align-items: center;
-  max-width: 70vw;
-}
-.image-design-1 img,
-.image-design-2 img,
-.image-design-3 img,
-.image-design-4 img {
-  opacity: 0;
-  z-index: 1;
-  transition: 0.2s;
-  margin: auto;
-
-}
-.image-design-1 img:hover,
-.image-design-2 img:hover,
-.image-design-3 img:hover,
-.image-design-4 img:hover {
-  opacity: 1;
-  z-index: 1;
-  transition: 0.2s;
-}
-
-.image-design-1{
-  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-13.png);
-  position: center;
-  opacity: 1;
-  background-repeat: no-repeat;
-}
-
-.image-design-2{
-  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-14.png);
-  position: center;
-  opacity: 1;
-  background-repeat: no-repeat;
-}
-
-.image-design-3{
-  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-15.png);
-  position: center;
-  opacity: 1;
-  background-repeat: no-repeat;
-}
-
-.image-design-4{
-  background-image: url(http://tinygarden-bucket.herokuapp.com/images/Design/TinyGarden-Configurator-16.png);
-  position: center;
-  opacity: 1;
-  background-repeat: no-repeat;
-}
-
-.image-design-5,
-.image-design-6,
-.image-design-7,
-.image-design-8 {
-  opacity: 1;
-  z-index: 0;
-}
-
-.center-elements{
-  align-content: center;
-  align-items: center;
 }
 
 .design-add-plant {
@@ -116,7 +104,6 @@
   font-size: 20px;
   text-align: center;
   height: 50px;
-  vertical-align: bottom;
 }
 
 .design-results-title {
@@ -132,7 +119,7 @@
 
 .design-snake {
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/snakeplant.png");
-  background-position: center; 
+  background-position: center;
   background-repeat: no-repeat;
   margin-top: 4px;
   height: 170px;
@@ -190,6 +177,7 @@
   margin: auto auto 0 auto;
   width: 520px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 2;
 }
 
 .wall-color-text {
@@ -215,7 +203,7 @@ transform: scale(1.2);
 }
 
 #muzli {
-  background-color: #fde5db;
+  background-color: #D6C7EF;
   margin: auto 10px;
 }
 
@@ -231,13 +219,13 @@ transform: scale(1.2);
 }
 
 #pantone {
-  background-color: #ff6666;
+  background-color: #EDD8D8;
   margin: 20px 10px;
 
 }
 
 #dizark {
-  background-color: #009579;
+  background-color: #ADBEAD;
   margin: 20px 10px;
 }
 
