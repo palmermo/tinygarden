@@ -16,15 +16,6 @@ class Product extends Component {
       .then(product => this.setState({ product }))
   }
 
-  handleAdd(amount){
-    
-    console.log(amount)
-  }
-
-  // handleSub(){
-
-  // }
-
   render(){
     const { product, price, amount } = this.state
     return (
@@ -35,8 +26,8 @@ class Product extends Component {
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <div className="add-remove">
-              <button className="product-btns" type="click" onClick={() => this.handleAdd(amount)}>+</button>
-              <button className="product-btns" type="click" onClick={() => this.handleSub(amount)}>-</button>
+              <button className="product-btns" type="click" >+</button>
+              <button className="product-btns" type="click" >-</button>
             </div>
           </div>
           <div className="product-right">
