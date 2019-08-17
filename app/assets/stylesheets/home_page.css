@@ -450,6 +450,11 @@ z-index: 5;
   font-weight: lighter;
 }
 
+.browse-articles:hover {
+  text-decoration: underline;
+  color: black; 
+}
+
 /* ------------------------------social media------------------------------- */
 
 

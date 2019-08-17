@@ -91,6 +91,33 @@
 .title {
   margin-right: 2vw;
   margin-bottom: 0;
+  font-family: 'Grenze';
+  font-family: 32px;
+}
+
+.nav-design-btn a {
+  padding: 12% 0 !important;
+}
+
+.nav-design-btn {
+  width: 54%;
+  margin: 0;
+  height: 2.6rem;
+  font-size: 2.1vh;
+  background-color: transparent;
+  color: white;
+  border: solid 3px rgb(0,146,122);
+}
+
+
+button #design-link-outline {
+  border: lightgreen 2px solid;
+  border-radius: 40px;
+}
+
+.title a {
+  text-transform: lowercase !important;
+  font-size: 3vh;
 }
 
 .dropdown {
@@ -164,6 +191,14 @@
   width: 3.3vw;
   display: flex;
   justify-content: center;
+}
+
+#cart {
+transition: transform 1s;
+}
+
+#cart:hover {
+transform: rotateY(360deg);
 }
 
 #cart a.nav-active {

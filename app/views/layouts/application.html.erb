@@ -21,7 +21,9 @@
         <ul class="left-side-nav">
           <li><%= link_to "Shop", products_path, class: params[:action] == 'index' ? 'nav-active' : ''  %></li>
           <li id="care-nav-link"><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
-          <div id="design-link-outline"><li><%= link_to "Design", design_path, class: params[:action] == 'design' ? 'nav-active' : '' %></li></div>
+          <button class="btn-round yellow nav-design-btn" >
+            <%= link_to "Design", design_path %>
+          </button>
         </ul>
         <div class="animated bounce title">
           <%= link_to 'tiny garden', root_path %>
