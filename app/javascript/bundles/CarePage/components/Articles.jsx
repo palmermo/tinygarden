@@ -26,7 +26,7 @@ const Articles = () => {
           </p>
         </div>
         <div className="read-more">
-          <p>Read more</p>
+          <a href="https://www.instagram.com/p/B0uBnJYlztk/"><p>Read more</p></a>
         </div>
         </div>
       </article>
@@ -49,7 +49,7 @@ const Articles = () => {
             </p>
           </div>
           <div className="read-more">
-            <p>Read more</p>
+          <a href="https://www.instagram.com/p/B0uBwRNlaB5/"><p>Read more</p></a>
           </div>
         </div>
       </article>
@@ -72,7 +72,7 @@ const Articles = () => {
           </p>
           </div>
         <div className="read-more">
-          <p>Read more</p>
+        <a href="https://www.instagram.com/p/B0uB2GslGPA/"><p>Read more</p></a>
         </div>
       </div>
     </article>
