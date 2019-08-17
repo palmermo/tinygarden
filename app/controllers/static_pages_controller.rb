@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
   end
 
   def cart
-    current_user ? @cart_items = current_user.cart.cart_products.map(&:to_json) : ""
+    @cart_items = current_user.cart.cart_products.map(&:to_json)
   end
 
   def admin
