@@ -20,7 +20,7 @@ class Product extends Component {
     const { product, price, amount } = this.state
     return (
       <li className="product-container">
-        <img src={product.url} alt="product"/>
+        <img src={product.url} alt={product.name} />
         <div className="product-details">
           <div className="product-left">
             <h3>{product.name}</h3>
