@@ -3,10 +3,10 @@
   height: 49.6vh;
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/careheader.png");
   background-size: 100%; 
-  background-repeat: repeat-x
+  background-repeat: repeat-x;
 }
 #top-ten {
-  padding-top: 15rem;
+  padding-top: 21vh;
 }
 
 .title-header {
@@ -87,7 +87,6 @@
   font-size: 18px;
   font-family: 'Lato';
   width: 55vw;
-  /* outline: deeppink solid 3px; */
 }
 
 .read-more {

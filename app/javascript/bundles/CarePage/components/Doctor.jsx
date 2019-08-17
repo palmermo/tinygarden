@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const Doctor = () => {
   return (
     <>
-      <div className="doctor-wrapper">
+      {/* <div className="doctor-wrapper">
         <div className="doctor-question"> What if my plant looks like this? </div>
         <div className="box-container-1">
           
@@ -37,7 +37,18 @@ const Doctor = () => {
 
         </div>
 
+      </div> */}
+       <div className="doctor-question"> What if my plant looks like this? </div>
+      <div class="plant-doc-grid-container">
+        <div id="plant-box-1" class="pd-grid-item">Yellow Pale Leaves</div>
+        <div id="plant-box-2"class="pd-grid-item"> Soft pliable leaves, green but droopy </div>
+        <div id="plant-box-3" class="pd-grid-item"> Brown leaf tips and edges </div>  
+        <div id="plant-box-4" class="pd-grid-item"> Growing Toward Light</div>
+        <div id="plant-box-5" class="pd-grid-item"> Black Spots or Holes </div>
+        <div id="plant-box-6" class="pd-grid-item"> Brown streaks and looser leaves </div>   
       </div>
+
+
     </>
   )
 }
