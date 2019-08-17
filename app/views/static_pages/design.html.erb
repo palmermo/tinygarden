@@ -26,18 +26,16 @@
               <%= image_tag 'Design/TinyGarden-Configurator-03.png', alt: 'hey'%>
             </div>
         </div>
-         <div id="image-design-4">
-            <div class="op1">
-              <%= image_tag 'Design/TinyGarden-Configurator-16.png', alt: 'hey'%>
-            </div>
-            <div id="shortpot-select" class="shortpot-op0" onclick="shortpot()">
-              <%= image_tag 'Design/TinyGarden-Configurator-04.png', alt: 'hey'%>
-            </div>
-
+        <div id="image-design-4">
+          <div class="op1">
+            <%= image_tag 'Design/TinyGarden-Configurator-16.png', alt: 'hey'%>
+          </div>
+          <div id="shortpot-select" class="shortpot-op0" onclick="shortpot()">
+            <%= image_tag 'Design/TinyGarden-Configurator-04.png', alt: 'hey'%>
+          </div>
         </div>
-        <div id="image-design-5" class="snake-plant-config">
-              <%= image_tag 'Plants/Transparent/Snake_Plant-300.png', alt: 'hey'%>
-            </div>
+        <div id="image-design-5" class="snake-plant-config" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
       </div>
     <div class= "design-palette">
       <div class="wall-color-text"> Background color </div>
@@ -52,15 +50,11 @@
       <div class= "design-add-plant">
         Drag & Drop your plant!
       </div>
-      <div class= "design-filters">
-      </div>
-      <div class= "">
-        <%= image_tag 'Plants/Transparent/Snake_Plant-300.png', alt: 'hey'%>
-        <%= image_tag 'Plants/Transparent/Chinese_Evergreen-300.png', alt: 'hey'%>
-        <%= image_tag 'Plants/Transparent/Rosemary-300.png', alt: 'hey'%>
-        <%= image_tag 'Plants/Transparent/Basil-300.png', alt: 'hey'%>
-
-
+      <div class= "plants-grid">
+        <%= image_tag 'Plants/Transparent/Snake_Plant-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)"%>
+        <%= image_tag 'Plants/Transparent/Chinese_Evergreen-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)"%>
+        <%= image_tag 'Plants/Transparent/Rosemary-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)"%>
+        <%= image_tag 'Plants/Transparent/Basil-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)" %>
       </div>
       <div class="design-results-title">
         Results
@@ -75,27 +69,19 @@
 <script>
 
 
-
-  function btnDizark() {
-    document.getElementById("config-wrapper").style.backgroundColor="#ADBEAD";
-}
-  function btnPantone() {
-    document.getElementById("config-wrapper").style.backgroundColor="#EDD8D8";
-}
-  function btnPhoca() {
-    document.getElementById("config-wrapper").style.backgroundColor="#ebf9f6";
-}
-  function btnBraden() {
-    document.getElementById("config-wrapper").style.backgroundColor="#fffaf0";
-}
-  function btnMuzli() {
-    document.getElementById("config-wrapper").style.backgroundColor="#D6C7EF";
-}
-  function switch_state() {
-    document.getElementById("config-wrapper").style.backgroundColor="#D6C7EF";
+function allowDrop(ev) {
+  ev.preventDefault();
 }
 
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
 
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 
 
 function shelf() {
@@ -134,6 +120,27 @@ function hangingplant() {
     document.getElementById("hangingplant-select").classList.add('hangingplant-op0');
     document.getElementById("hangingplant-select").classList.remove('hangingplant-op1');
   }
+}
+
+
+  function btnDizark() {
+    document.getElementById("config-wrapper").style.backgroundColor="#ADBEAD";
+}
+  function btnPantone() {
+    document.getElementById("config-wrapper").style.backgroundColor="#EDD8D8";
+}
+  function btnPhoca() {
+    document.getElementById("config-wrapper").style.backgroundColor="#ebf9f6";
+}
+  function btnBraden() {
+    document.getElementById("config-wrapper").style.backgroundColor="#fffaf0";
+}
+  function btnMuzli() {
+    document.getElementById("config-wrapper").style.backgroundColor="#D6C7EF";
+}
+
+  function switch_states() {
+    document.getElementById("config-wrapper").style.backgroundColor="#D6C7EF";
 }
 
 </script>
