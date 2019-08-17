@@ -1,5 +1,3 @@
-<%# <%= render "plants/index", plants: @plants %>
-
 <div class="homepage-general">
   <section id="welcome">
     <div class="center-template background-welcome">
@@ -19,7 +17,7 @@
   </section>
   <section id="Featured-Products" class="center-template">
     <div class="shopfeatprod">
-     <%= react_component 'FeaturedProducts', props: { plants: @plants }, prerender: false %>
+      <%= react_component 'FeaturedProducts', props: { plants: @plants }, prerender: false %>
     </div>
     <div class="center-template">
       <a href="#" class="blacks">

@@ -19,8 +19,9 @@
 
 .plantlist-wrapper {
   overflow: scroll;
-  height: 70vh;
+  height: 82vh;
   width: 112vw;
+  padding: 0 115px;
 }
 
 .plantlist-wrapper::-webkit-scrollbar { width: 0 !important }

@@ -5,7 +5,7 @@ class Product extends Component {
   state = {
     product: { images:[] },
     amount: this.props.item.amount,
-    price: this.props.item.price
+    price: this.props.item.price,
   }
 
   componentDidMount(){
@@ -17,22 +17,22 @@ class Product extends Component {
   }
 
   render(){
-    const { product, price } = this.state
+    const { product, price, amount } = this.state
     return (
       <li className="product-container">
-        {
-          product.images.map ((image, i) => {
-            return <img src={image} alt="product" key={i}/>
-          })
-        }
+        <img src={product.url} alt="product"/>
         <div className="product-details">
           <div className="product-left">
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <button type="submit">+</button>
+            <div className="add-remove">
+              <button className="product-btns" type="click" >+</button>
+              <button className="product-btns" type="click" >-</button>
+            </div>
           </div>
           <div className="product-right">
             <p>{(price / 100).toFixed(2)}</p>
+            <p>{amount}</p>
             <button type="submit">d</button>
           </div>
         </div>

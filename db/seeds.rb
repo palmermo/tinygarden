@@ -1,3 +1,4 @@
+
 user = User.create(
   name: "izzy", email: "izzy@email.com", password: "password", admin: true
 )
@@ -9,19 +10,17 @@ Cart.create(
 Plant.destroy_all
 
 Plant.create([
-  {name: "Peppermint", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
-  {name: "Rubber Plant", size: 2,light: 2, maintenance: 2, category: 1, description: "#"},
-  {name: "Basil", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
-  {name: "ZZ Plant", size: 2,light: 2, maintenance: 1, category: 1, description: "#"},
-  {name: "Snake Plant", size: 2,light: 1, maintenance: 1, category: 1, description: "#"},
-  {name: "Aloe", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
-  {name: "Rosemary", size: 1,light: 2, maintenance: 1, category: 0, description: "#"},
-  {name: "Calathea", size: 2,light: 1, maintenance: 2, category: 1, description: "#"},
-  {name: "Pothos", size: 2,light: 2, maintenance: 2, category: 1, description: "#"},
-  {name: "Monstera", size: 2,light: 1, maintenance: 1, category: 1, description: "#"},
+  {name: "Peppermint", size: 1,light: 2, maintenance: 1, category: 0, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Peppermint-300.jpg"},
+  {name: "Rubber Plant", size: 2,light: 2, maintenance: 2, category: 1, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Rubber_Plant-300.jpg"},
+  {name: "Basil", size: 1,light: 2, maintenance: 1, category: 0, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Basil-300.jpg"},
+  {name: "ZZ Plant", size: 2,light: 2, maintenance: 1, category: 1, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/ZZ_Plant-300.jpg"},
+  {name: "Snake Plant", size: 2,light: 1, maintenance: 1, category: 1, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Snake_Plant-300.jpg"},
+  {name: "Aloe", size: 1,light: 2, maintenance: 1, category: 0, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/aloe.png"},
+  {name: "Rosemary", size: 1,light: 2, maintenance: 1, category: 0, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Rosemary-300.jpg"},
+  {name: "Calathea", size: 2,light: 1, maintenance: 2, category: 1, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Calathea-300.jpg"},
+  {name: "Pothos", size: 2,light: 2, maintenance: 2, category: 1, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Pothos-300.jpg"},
+  {name: "Monstera", size: 2,light: 1, maintenance: 1, category: 1, description: "#", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Monstera-300.jpg"},
 ])
-
-Product.destroy_all
 
 Product.destroy_all
 
