@@ -23,6 +23,7 @@ class Plant < ApplicationRecord
       maintenance: maintenance,
       light: light,
       category: category,
+      url: url,
     }
   end
 end

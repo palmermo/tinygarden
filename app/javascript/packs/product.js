@@ -11,5 +11,5 @@ ReactOnRails.register({
   Cart,
   Plants,
   FeaturedProducts,
-  CarePage
+  CarePage,
 });

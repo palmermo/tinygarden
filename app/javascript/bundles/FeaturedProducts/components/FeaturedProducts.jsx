@@ -6,7 +6,7 @@ const FeaturedProducts = ({ plants = [] }) => (
       plants.map((plant, i) => (
       <article className="cards" key={i}>
         <div className="hvrbox hvrbox-width">
-          <img src="http://tinygarden-bucket.herokuapp.com/images/aloe.png" alt="${plant.name}" key={i}/>
+          <img src={plant.url} alt="Plant Image" key={i}/>
           <div className="space-between">
           <h5 className="left">{plant.name}</h5>
             <h6 className="right">{plant.price}</h6>
