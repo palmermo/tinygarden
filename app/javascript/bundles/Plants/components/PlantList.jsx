@@ -11,6 +11,10 @@ class PlantList extends Component {
     this.setState({ plant, modalOpen: true })
   }
 
+  addClick = plant => {
+    console.log("plant",plant)
+  }
+
   toggleModal = _ => this.setState(prevState => ({ modalOpen: !prevState.modalOpen }));
   
   render() {
@@ -30,11 +34,11 @@ class PlantList extends Component {
                   <div className="hvrbox-text">
                     <h3>{plant.name}</h3>
                     <h4>{plant.size}</h4>
-                      Lorem ipsum dolor sit assssssssssssssssss jndwkfjnwe jidbnfij he ehv wefhj vejfh vjer fwvij rfljv elifkjvnlkjuse fv werij vijmet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.<br/>>-- Click to see more --
+                      <p>{plant.description}</p><br/>-- Click to see more --
                   </div>
                 </div>
               </div>
-              <button className ="btn-round red filter-red-bttn">
+              <button className ="btn-round red filter-red-bttn" onClick={() => this.addClick(plant)}>
                 Add to Cart
               </button>
             </article>
