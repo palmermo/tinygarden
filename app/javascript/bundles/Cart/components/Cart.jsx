@@ -18,7 +18,8 @@ class Cart extends Component {
     return (
       <>
         <div id="cart-header">
-          <h1>Ready to check out?</h1>
+          { this.state.cartItems ? "Ready to check out?" : "No items selected" }
+          
         </div>
         <div id="cart-container" >
           <Products items={this.state.cartItems}/>

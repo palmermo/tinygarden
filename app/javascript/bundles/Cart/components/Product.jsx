@@ -25,7 +25,6 @@ class Product extends Component {
         <div className="product-details">
           <div className="product-left">
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
             <div className="add-remove">
               <button className="product-btns" type="click" >+</button>
               <button className="product-btns" type="click" >-</button>

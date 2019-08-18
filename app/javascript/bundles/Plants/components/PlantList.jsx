@@ -11,10 +11,6 @@ class PlantList extends Component {
     this.setState({ plant, modalOpen: true })
   }
 
-  addClick = plant => {
-    console.log("plant",plant)
-  }
-
   toggleModal = _ => this.setState(prevState => ({ modalOpen: !prevState.modalOpen }));
   
   render() {
@@ -23,18 +19,18 @@ class PlantList extends Component {
       <div className="shopfeatprod plantlist-wrapper">
         {
           this.props.plants.map((plant, i) => (
-            <article onClick={() => this.handleClick(plant)} className="cards cards-filter" key={i}>
+            <article className="cards cards-filter" key={i}>
               <div className="hvrbox hvrbox-width">
                 <img className="plant-filter-image" src={plant.url} alt="${plant.name}" key={i}/>
                 <div className="space-between">
                   <h5 className="left">{plant.name}</h5>
                   <h6 className="right">{plant.price}</h6>
                 </div>
-                <div className="hvrbox-layer_top">
+                <div className="hvrbox-layer_top" onClick={() => this.handleClick(plant)} >
                   <div className="hvrbox-text">
                     <h3>{plant.name}</h3>
-                    <h4>{plant.size}</h4>
-                      <p>{plant.description}</p><br/>-- Click to see more --
+                    <h4>{plant.size} - {plant.maintenance}</h4>
+                    <p>{plant.description.slice(0, 180) + "..."}</p><br/>-- Click to see more --
                   </div>
                 </div>
               </div>
@@ -47,7 +43,7 @@ class PlantList extends Component {
         <Modal
           isOpen={modalOpen}
           modalContent={plant}
-          actions={[{ label: 'Close', onClick: this.toggleModal }]}
+          actions={[{ label: 'Back', onClick: this.toggleModal}]}
         />
       </div>
     )
