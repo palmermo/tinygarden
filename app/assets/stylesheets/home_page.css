@@ -149,7 +149,7 @@
   transition: color 0.1s, background-color 0.1s;
 }
 
-/* ----------------- Featured Products: Images, articles and Hoover effects ----------------- */
+/* ----------------- Featured Products: Images, articles and Hover effects ----------------- */
 
 .cards img {
   height: 300px;
@@ -199,7 +199,7 @@ z-index: 5;
   padding: 40px;
 }
 
-/* ----------------- Featured Products: Images, articles and Hoover effects ----------------- */
+/* ----------------- Featured Products: Images, articles and Hover effects ----------------- */
 
 .cards img:hover {
   background-color: rgba(58, 58, 58, 0.658);

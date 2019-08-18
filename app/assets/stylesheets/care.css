@@ -1,12 +1,12 @@
 
 .care-header{
-  height: 49.6vh;
+  height: 63.6vh;
   background-image: url("http://tinygarden-bucket.herokuapp.com/images/careheader.png");
   background-size: 100%; 
-  background-repeat: repeat-x
+  background-repeat: repeat-x;
 }
 #top-ten {
-  padding-top: 15rem;
+  padding-top: 21vh;
 }
 
 .title-header {
@@ -28,13 +28,14 @@
 #care-sub-nav #sub-cont #subnav2 {
   display: inline-block;
   width: 50%;
-  height: 10.3vh;
-  color: grey;
-  border-bottom: solid 1.7vh;
+  height: 8.3vh;
+  color: lightgrey;
+  border-bottom: solid 0.6vh;
   font-family: 'Lato', sans-serif;
   font-size: 22px;
   font-weight: bold;
-  letter-spacing: 0.27px;
+  letter-spacing: 0.2vw;
+  margin-top: 2vh;
 }
 
 .orange {
@@ -68,18 +69,44 @@
 .plant-pic {
   height: 277px;
 }
+
+.care-tips-title{
+  font-family: serif;
+  font-size: 36px;
+  margin-left: 1.5rem;
+  font-family: 'PT Serif', serif;
+}
+
 .care-tips {
   margin-left: 1.5rem;
   font-family: Lato;
 }
-.read-more{
+
+.care-tips-summary {
+  margin-left: 1.5rem;
+  font-size: 18px;
+  font-family: 'Lato';
+  width: 55vw;
+}
+
+.read-more {
   font-family: Lato;
   margin-left: 1.5rem;
+  color: black;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: underline;
 }
 .read-more:hover{
   cursor:pointer;
+  color: black;
+}
+.read-more a p {
+  color: black !important;
+}
+
+.read-more a p:hover {
+  color: black !important;
 }
 .section{
   justify-content: center;
