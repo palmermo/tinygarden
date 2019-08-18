@@ -35,6 +35,9 @@
           </div>
         </div>
         <div id="image-design-5" class="snake-plant-config" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+          <div>
+          </div>
         </div>
       </div>
     <div class= "design-palette">
@@ -50,14 +53,14 @@
       <div class= "design-add-plant">
         Drag & Drop your plant!
       </div>
-      <div class= "plants-grid">
-        <%= image_tag 'Plants/Transparent/Snake_Plant-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)"%>
-        <%= image_tag 'Plants/Transparent/Chinese_Evergreen-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)"%>
-        <%= image_tag 'Plants/Transparent/Rosemary-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)"%>
-        <%= image_tag 'Plants/Transparent/Basil-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)" %>
+      <div class= "plants-grid" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <%= image_tag 'Plants/Transparent/Snake_Plant-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag1"%>
+        <%= image_tag 'Plants/Transparent/Chinese_Evergreen-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag2"%>
+        <%= image_tag 'Plants/Transparent/Rosemary-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag3"%>
+        <%= image_tag 'Plants/Transparent/Basil-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag4" %>
       </div>
       <div class="design-results-title">
-        Results
+        Total : $50
         <div class="addplant-btn">
           <button class="add-to-space" onclick="btnRed()" type="button">Add to cart</button>
         </div>
