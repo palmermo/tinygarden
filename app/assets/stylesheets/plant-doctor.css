@@ -43,6 +43,7 @@
   margin-left: 111px;
   margin-right: -43px;
   margin-bottom: 21px;
+  text-decoration: none;
 }
 
 #plant-box-2 {
@@ -50,24 +51,28 @@
   margin-right: -7px;
   margin-left: -119px;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 #plant-box-3 {
   background-image: url(http://tinygarden-bucket.herokuapp.com/images/brownleaf.png);
   margin-left: -199px;
   margin-bottom: 22px;
+  text-decoration: none;
 }
 
 #plant-box-4 {
   background-image: url(http://tinygarden-bucket.herokuapp.com/images/blackspotleaf.png);
   margin-left: 109px;
   margin-right: -45px;
+  text-decoration: none;
 }
 
 #plant-box-5 {
   background-image: url(http://tinygarden-bucket.herokuapp.com/images/lightgrowleaf.png);
   margin-left: -134px;
   margin-right: -21px;
+  text-decoration: none;
 }
 
 #plant-box-6 {
@@ -76,16 +81,17 @@
   margin-left: -154px;
 }
 
+
 .ailment{
   margin: 70px;
   border: 5px solid transparent;
   font-size: 30px;
-
 }
 
 .plant-doc-grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  text-decoration: none;
   padding: 10px;
   margin: 20px;
   place-items: center;

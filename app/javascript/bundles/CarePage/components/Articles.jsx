@@ -24,7 +24,7 @@ const Articles = () => {
           </p>
         </div>
         <div className="read-more">
-          <a href="https://www.instagram.com/p/B0uBnJYlztk/"><p>Read more</p></a>
+          <a href="https://www.instagram.com/p/B0uB2GslGPA/?utm_source=ig_web_copy_link"><p>Read more</p></a>
         </div>
         </div>
       </article>
@@ -47,7 +47,7 @@ const Articles = () => {
             </p>
           </div>
           <div className="read-more">
-          <a href="https://www.instagram.com/p/B0uBwRNlaB5/"><p>Read more</p></a>
+          <a href="https://www.instagram.com/p/B0uBnJYlztk/?utm_source=ig_web_copy_link"><p>Read more</p></a>
           </div>
         </div>
       </article>
@@ -70,7 +70,7 @@ const Articles = () => {
           </p>
           </div>
         <div className="read-more">
-        <a href="https://www.instagram.com/p/B0uB2GslGPA/"><p>Read more</p></a>
+        <a href="https://www.instagram.com/p/B0uBjnilSk3/?utm_source=ig_web_copy_link"><p>Read more</p></a>
         </div>
       </div>
     </article>
