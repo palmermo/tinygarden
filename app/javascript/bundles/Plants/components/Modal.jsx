@@ -9,15 +9,16 @@ const Modal = ({ isOpen, modalContent, actions = [] }) =>
           <div className="modalWrapper">
             <div className="modalHeader">
               <img src="https://img.icons8.com/ios-filled/25/000000/double-left.png" className="back-arrow"/>
-              <h3 className="icn-person material-icons animated bounce">Tiny Garden</h3>
+              <h3 className="icn-person material-icons animated bounce">tiny garden</h3>
               <div>
-                Cart
+                
               </div>
             </div>
             <div className="c-modal_body">
+              <img src={modalContent.url} alt={modalContent.name} />
               <div className="plant-modal">
-                <p>{modalContent.name}</p>
-                <p>{modalContent.size}</p>
+                <h1>{modalContent.name}</h1>
+                <p>{modalContent.price}</p>
               </div>
             </div>
             {actions.map(({ label, onClick, i }) => (

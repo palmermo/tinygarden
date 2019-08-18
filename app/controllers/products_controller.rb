@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @plants = Plant.all
+    @products = Product.all
   end
 
   def show

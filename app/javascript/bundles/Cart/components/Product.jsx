@@ -9,6 +9,7 @@ class Product extends Component {
   }
 
   componentDidMount(){
+    console.log(this.props)
     const { item } = this.props
     const url = `/${item.sellableType.toLowerCase()}s/${item.sellableId}.json`
     fetch(url)

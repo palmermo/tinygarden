@@ -14,12 +14,38 @@
 .modalWrapper {
   display: grid;
   height: 100%;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
 }
 
 .modalHeader h3 {
-  font-size: 3.8vh;
-  font-family: Serif;
+  font-size: 2.7em;
+  margin-right: 0.7vw;
+  margin-bottom: 0;
+  font-family: 'Grenze';
+  font-family: 32px;
+}
+
+.c-modal_body img {
+  padding-left: 11%;
+  width: 32%;
+}
+
+.plant-modal h1 {
+  color: #00927A;
+}
+
+.plant-modal {
+  font-family: 'serif';
+  color: #00927A;
+  width: 27.8%;
+  margin-left: 1.4%;
+  text-align: left;
+  border: black 2px solid;
+  height: 83%;
+  margin-top: 3%;
+  padding-left: 3rem;
+  position: relative;
+  font-size: xx-large;
 }
 
 .modalHeader {
@@ -27,7 +53,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin: 0 auto;
-  height: 21%;
+  height: 100%;
   width: 100%;
   border-bottom: .1em solid black;
 }
@@ -56,6 +82,9 @@
 
 .c-modal_body {
   text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .modal-btns {
   display: flex;
