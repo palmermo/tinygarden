@@ -5,7 +5,10 @@
   width: 100%;
   height: 600px;
   display: grid;
-  /* opacity: 0.5; */
+}
+
+#user-card-contact {
+  margin: 24px 0;
 }
 
 #user-welcome {
@@ -58,6 +61,7 @@
 
 .purchase-history:hover {
   color: orange;
+  text-decoration: none;
 }
 
 .profile-manage-reviews {
@@ -70,7 +74,7 @@
 
 .profile-manage-reviews:hover {
   color: orange;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer
 }
 
@@ -86,25 +90,25 @@
 .edit-profile-section:hover {
   font-family: 'Pt-Serif', serif;
   color:orange;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer
 }
 
 /* -----------user card------------ */
 
-
-.user-card{
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-max-width: 300px;
-width: 700px;
-height: 350px;
-margin-top: 163px;
-margin-left: 130px;
-text-align: center;
-font-family: 'Lato';
-padding-top: 2%;
-background-color: white;
-opacity: 0.6;
+.user-card {
+  box-shadow: 0 11px 19px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  width: 700px;
+  height: 350px;
+  margin-top: 163px;
+  margin-left: 130px;
+  text-align: center;
+  font-family: 'Lato';
+  padding-top: 2%;
+  background-color: white;
+  opacity: 0.6;
+  box-shadow: 3px;
 }
 
 #izzy-user {

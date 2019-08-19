@@ -427,10 +427,11 @@ z-index: 5;
 }
 
 #showoff {
-  font-family: serif;
+  font-family: 'PT-Serif' ,serif;
   text-align: center;
-  font-size: 1.5rem;
-  padding:0.3rem;
+  font-size: 2.5rem;
+  padding: 2.4rem;
+  height: 15%;
 }
 
 .instafeed {
@@ -449,12 +450,12 @@ z-index: 5;
   opacity: 0.7;
 }
 
-#mytinygdn {
-  font-family: serif;
+#mytinygarden {
+  font-family: 'PT-Serif' ,serif;
   text-align: center;
-  font-size: 1.3rem;
-  padding: 0.3rem;
-  font-weight: lighter;
+  font-size: 2.5rem;
+  padding: 2.4rem;
+  height: 15%;
 }
 
 .browse-articles:hover {
