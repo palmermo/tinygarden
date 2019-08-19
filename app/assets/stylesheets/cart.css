@@ -127,17 +127,11 @@
   background-color: rgb(255, 180, 0);
   color: white;
   width: 84%;
-  height: 3.6rem;
-  margin-top: 7%;
-  margin-left: 6.9%;
+  height: auto;
   border-radius: 40px;
-  font-size: 2vh;
   transition: 0.3s;
-}
-
-.btnprimarycart span {
-  position: relative;
-  bottom: 3.2px;
+  margin: auto;
+  font-size: larger;
 }
 
 .btnprimarycart a:visited {

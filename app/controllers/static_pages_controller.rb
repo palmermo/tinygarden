@@ -16,6 +16,7 @@ class StaticPagesController < ApplicationController
   end
 
   def design
+    @success_url = ENV['CREATE_SUCCESS_URL']
   end
 
   def cart
