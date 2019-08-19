@@ -26,13 +26,13 @@ class Product extends Component {
             <h3>{product.name}</h3>
             <div className="add-remove">
               <button className="product-btns" type="click" onClick={handleAmountChange(item.id, 1)} >+</button>
+              <div className="amount-totes">{item.amount}</div>
               <button className="product-btns" type="click" onClick={handleAmountChange(item.id, -1)} >-</button>
             </div>
           </div>
           <div className="product-right">
             <p>{(item.price / 100).toFixed(2)}</p>
-            <p>{item.amount}</p>
-            <button onClick={handleDeleteItem(item.id)}  type="submit">d</button>
+            <button onClick={handleDeleteItem(item.id)}  className="cart-delete" type="submit"><img src="https://img.icons8.com/ios/50/000000/waste.png"/></button>
           </div>
         </div>
       </li>

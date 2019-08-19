@@ -11,12 +11,25 @@
   display: flex;
   justify-content: center;
   padding: 3%;
+  font-size: xx-large;
   padding-top: 7%;
   background-color: rgb(218, 239, 236);
 }
 
 #cart-header h1 {
   font-weight: 500;
+}
+
+.cart-delete {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: 29%;
+}
+
+.cart-delete img {
+  width: 37% !important;
 }
 
 /*  PRODUCTS  */
@@ -53,6 +66,13 @@
 
 }
 
+.amount-totes {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+}
+
 .product-right {
   display: flex;
   flex-direction: column;
@@ -70,7 +90,13 @@
 }
 
 .add-remove {
+  display: flex;
+  width: fit-content;
+  border: solid black 1px;
+}
 
+.add-remove button {
+  width: 2rem;
 }
 
 /*  SUMMARY  */

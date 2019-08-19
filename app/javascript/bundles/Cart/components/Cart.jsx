@@ -30,8 +30,10 @@ class Cart extends Component {
   fetchData = async () => {
     const { cartId } = this.props
     const { data } = await axios.get(`/carts/${cartId}/cart_products`)
-    console.log('data', data)
     this.setState({ cartItems: data.cartItems, refetch: false })
+    let subtotal = 0
+    this.state.cartItems.forEach(p => (subtotal += (p.price / 100) * p.amount) )
+    this.setState({ subtotal })
   }
 
   handleAmountChange = (id, diff) => async () => {
@@ -52,12 +54,12 @@ class Cart extends Component {
     return (
       <>
         <div id="cart-header">
-          { this.state.cartItems ? "Ready to check out?" : "No items selected" }
+          { this.state.cartItems.length == 0 ? "No items selected" : "Ready to check out?" }
           
         </div>
         <div id="cart-container" >
           <Products items={this.state.cartItems} handleAmountChange={this.handleAmountChange} handleDeleteItem={this.handleDeleteItem} />
-          <Summary summary={this.state.subtotal}/>
+          <Summary summary={this.state.subtotal} />
         </div>
       </>
     );
