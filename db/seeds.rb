@@ -1,3 +1,5 @@
+Product.destroy_all
+Plant.destroy_all
 
 user = User.create(
   name: "izzy", email: "izzy@email.com", password: "password", admin: true
@@ -6,8 +8,6 @@ user = User.create(
 Cart.create(
   user_id: user.id
 )
-
-Plant.destroy_all
 
 Plant.create([
   {name: "Peppermint", size: 1,light: 2, maintenance: 1, category: 0, description: "Peppermint (Mentha piperita ) is an aromatic perennial plant that grows to a height of about 3 ft (1 m). It has light purple flowers and green leaves with serrated edges. Peppermint belongs to the Lamiaceae family and grows throughout North America, Asia, and Europe. There are more than 25 species of true mint grown throughout the world.", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Peppermint-300.jpg"},
@@ -22,8 +22,6 @@ Plant.create([
   {name: "Monstera", size: 2,light: 1, maintenance: 1, category: 1, description: "Monstera deliciosa, commonly called split-leaf philodendron, is native to Central America. It is a climbing, evergreen perennial vine that is perhaps most noted for its large perforated leaves on thick plant stems and its long cord-like aerial roots. In its native tropical habitat, it will climb somewhat impressively to 70’ into large trees, clothing the trunks with leaves in the 1-3’ long range. Indoor plants more typically are grown in the 6-8’ range.", url: "http://tinygarden-bucket.herokuapp.com/images/Plants/Monstera-300.jpg"},
 ])
 
-Product.destroy_all
-
 Product.create([
   {sku: "pep1", price: 500, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Peppermint').id, amount: rand(25) },
   {sku: "rub2", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Rubber Plant').id, amount: rand(25) },
@@ -37,7 +35,7 @@ Product.create([
   {sku: "mon10", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Monstera').id, amount: rand(25) }
 ])
 
-Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: rand(25) )}
+Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.first.cart.id, product_id: p.id , amount: rand(25) )}
 
 Accessory.create([
   {name: 'Pot', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/table.png" },
@@ -45,7 +43,6 @@ Accessory.create([
   {name: 'Hanging thing', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/hanging-pot.png" },
   {name: 'Shelf', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/shelf.png" }
 ])
-
 
 Product.create([
   {sku: "pot1", price: 4000, sellable_type: "Accessory", sellable_id: Accessory.find_by(name: 'Pot').id, amount: rand(25) },
