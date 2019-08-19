@@ -16,7 +16,11 @@ class StaticPagesController < ApplicationController
   end
 
   def design
-    @success_url = ENV['CREATE_SUCCESS_URL']
+    if current_user
+      @success_url = ENV['CREATE_SUCCESS_URL']
+    else
+      redirect_to root_path
+    end
   end
 
   def cart

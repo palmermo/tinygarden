@@ -1,7 +1,7 @@
 
-# user = User.create(
-#   name: "izzy", email: "izzy@email.com", password: "password", admin: true
-# )
+user = User.create(
+  name: "izzy", email: "izzy@email.com", password: "password", admin: true
+)
 
 Cart.create(
   user_id: user.id
@@ -37,7 +37,7 @@ Product.create([
   {sku: "mon10", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Monstera').id, amount: rand(25) }
 ])
 
-# Product.all.sample(5).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: 1 )}
+Product.all.sample(5).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: 1 )}
 
 Accessory.create([
   {name: 'chair', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample },

@@ -53,6 +53,13 @@
 
 }
 
+.amount-totes {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+}
+
 .product-right {
   display: flex;
   flex-direction: column;
@@ -70,7 +77,13 @@
 }
 
 .add-remove {
+  display: flex;
+  width: fit-content;
+  border: solid black 1px;
+}
 
+.add-remove button {
+  width: 2rem;
 }
 
 /*  SUMMARY  */
