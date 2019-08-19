@@ -1,5 +1,6 @@
-Product.destroy_all
 Plant.destroy_all
+Accessory.destroy_all
+Product.destroy_all
 
 User.destroy_all
 
