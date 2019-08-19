@@ -50,8 +50,10 @@
 .purchase-history {
   font-family: 'Pt-Serif', serif;
   font-size: 24px;
-  color:lightgrey;
   cursor: pointer;
+  color: green;
+  opacity: 0.3;
+
 }
 
 .purchase-history:hover {
@@ -60,8 +62,9 @@
 
 .profile-manage-reviews {
   font-family: 'Pt-Serif', serif;
-  color:lightgrey;
   font-size: 24px;
+  color: green;
+  opacity: 0.3;
 
 }
 
@@ -73,9 +76,10 @@
 
 .edit-profile-section {
   font-family: 'Pt-Serif', serif;
-  color:lightgrey;
   cursor: pointer;
   font-size: 24px;
+  color: green;
+  opacity: 0.3;
 
 }
 
