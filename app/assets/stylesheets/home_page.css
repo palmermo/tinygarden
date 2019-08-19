@@ -367,7 +367,7 @@ z-index: 5;
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
-  padding: 0 30px;
+  padding: 0 60px;
   justify-content: space-around;
 }
 
@@ -385,11 +385,16 @@ z-index: 5;
 
 .inner-card1, .inner-card2, .inner-card3 {
   height: 500px;
+  width: 360px;
   background-color: #FFE2A5;
   margin: 10px;
   display: grid;
-  padding: 0 50px 30px 50px;
+  padding: 0 30px 30px 30px;
   border-radius: 10px;
+}
+.inner-card1 p, .inner-card2 p, .inner-card3 p {
+  font-size: 16px;
+  text-align: justify;
 }
 
 .inner-card1 h2, .inner-card2 h2, .inner-card3 h2 {
