@@ -4,11 +4,10 @@ import '../../../../assets/stylesheets/products.css';
 class Product extends Component {
   state = {
     product: { images:[] },
-    amount: this.props.item.amount,
-    price: this.props.item.price,
   }
 
   componentDidMount(){
+    console.log(this.props)
     const { item } = this.props
     const url = `/${item.sellableType.toLowerCase()}s/${item.sellableId}.json`
     fetch(url)
@@ -17,23 +16,23 @@ class Product extends Component {
   }
 
   render(){
-    const { product, price, amount } = this.state
+    const { product } = this.state
+    const { handleAmountChange, item, handleDeleteItem } = this.props;
     return (
       <li className="product-container">
-        <img src={product.url} alt="product"/>
+        <img src={product.url} alt={product.name} />
         <div className="product-details">
           <div className="product-left">
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
             <div className="add-remove">
-              <button className="product-btns" type="click" >+</button>
-              <button className="product-btns" type="click" >-</button>
+              <button className="product-btns" type="click" onClick={handleAmountChange(item.id, 1)} >+</button>
+              <button className="product-btns" type="click" onClick={handleAmountChange(item.id, -1)} >-</button>
             </div>
           </div>
           <div className="product-right">
-            <p>{(price / 100).toFixed(2)}</p>
-            <p>{amount}</p>
-            <button type="submit">d</button>
+            <p>{(item.price / 100).toFixed(2)}</p>
+            <p>{item.amount}</p>
+            <button onClick={handleDeleteItem(item.id)}  type="submit">d</button>
           </div>
         </div>
       </li>

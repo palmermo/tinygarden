@@ -151,6 +151,13 @@
 
 /* ----------------- Featured Products: Images, articles and Hover effects ----------------- */
 
+.product-link a:link, 
+.product-link a:active, 
+.product-link a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .cards img {
   height: 300px;
   width: 100%;
