@@ -38,10 +38,12 @@ Product.create([
 ])
 
 Accessory.create([
-  {name: 'chair', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample },
-  {name: 'table', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample },
-  {name: 'hanging thing', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample }
-  ])
+  {name: 'Pot', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/table.png" },
+  {name: 'table', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/tall-table.png" },
+  {name: 'hanging thing', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/hanging-pot.png" },
+  {name: 'Shelf', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/shelf.png" }
+])
+
 
 Product.create([
   {sku: "ch1", price: 4000, sellable_type: "Accessory", sellable_id: Accessory.find_by(name: 'chair').id, amount: rand(25) },
