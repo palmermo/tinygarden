@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resources :products
   resources :plants
   resources :accessories
+  resources :carts do 
+    resources :cart_products
+  end
 
   get '/admin/products', to: 'products#admin_products', as: 'admin_products'
 
