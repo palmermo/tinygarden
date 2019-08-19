@@ -92,7 +92,7 @@
 
 .add-remove {
   display: flex;
-  width: fit-content;
+  width: max-content;
   border: solid black 1px;
 }
 
