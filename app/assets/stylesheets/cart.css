@@ -13,6 +13,7 @@
   padding: 3%;
   font-size: xx-large;
   padding-top: 7%;
+  font-family: "PT Serif, serif";
   background-color: rgb(218, 239, 236);
 }
 
@@ -91,7 +92,7 @@
 
 .add-remove {
   display: flex;
-  width: fit-content;
+  width: max-content;
   border: solid black 1px;
 }
 
