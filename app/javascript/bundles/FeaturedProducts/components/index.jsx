@@ -3,7 +3,7 @@ import axios from 'axios'
 import FeaturedProducts from 'FeaturedProducts'
 
 class FeaturedList extends Component {
-  state = { plants: [], 
+  state = { plants: [].sort, 
   filters: { size: [], light: [], maintenance: [], category: [] }, 
   }
 

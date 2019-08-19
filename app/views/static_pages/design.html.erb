@@ -90,7 +90,6 @@ async function addToCart() {
   const requests = plants.map(({ id, plant }) => !plant && axios.post(`/carts/${cartID}/cart_products`, { product_id: id }, { headers }))
   await Promise.all(requests)
   window.location.href = cartButton ? cartButton.getAttribute('data') : window.location.href
-
 }
 
 function allowDrop(ev) {
