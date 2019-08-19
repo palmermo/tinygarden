@@ -13,14 +13,12 @@ class CarePage extends React.Component{
   }
 
   articlesChange = () => {
-    console.log(this.state.articles)
     if (this.state.articles == false) {
       this.setState({articles: true, doctor: false}) 
     }
   }
 
   doctorChange = () => {
-    console.log(this.state.articles)
     if (this.state.doctor == false) {
       this.setState({doctor: true, articles: false}) 
     }

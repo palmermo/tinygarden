@@ -14,9 +14,9 @@ class PlantsController < ApplicationController
         { value: 2, label: 'full' }
       ],
       [
-        { value: 0, label: 'easy' },
-        { value: 1, label: 'intermediate' },
-        { value: 2, label: 'hard' },
+        { value: 0, label: 'easy to care' },
+        { value: 1, label: 'takes skill' },
+        { value: 2, label: 'difficult to care' },
       ],
       [
         { value: 0, label: 'herb' },

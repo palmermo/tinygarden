@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Product from './Product'
 
-const Products = props => {
+const Products = ({ items, handleAmountChange, handleDeleteItem }) => {
   return (
     <>
       <ul id="products-container">
         {
-          props.items.map((item) => {
+          items.map((item) => {
+            console.log('item?', item)
             return (
               <div key={item.id}>
-                <Product item={item} /> 
+                <Product item={item} handleAmountChange={handleAmountChange} handleDeleteItem={handleDeleteItem} /> 
                 <hr/>
               </div>
             )

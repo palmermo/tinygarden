@@ -23,14 +23,14 @@
   margin-top: 6rem;
   display: grid;
   grid-template:
-    '. . . . . . . h h .'
-    '. s s s s s . h h .'
-    '. s s s s s . h h .'
-    '. s s s s s . h h .'
-    '. k k . . . . . . .'
-    '. k k . . . . t t .'
-    '. p p . . . . t t .'
-    '. p p . . . . t t .';
+    '. s s s s s h h'
+    '. s s s s s h h'
+    '. s s s s s h h'
+    '. k k . . . h h'
+    '. k k . . . . .'
+    '. k k . . t t .'
+    '. p p . . t t .'
+    '. . . . . t t .';
   grid-gap: 5px;
   width: 100%;
 }
@@ -38,9 +38,15 @@
 #image-design-1 { grid-area: s; display: block; padding: 30px;}
 #image-design-2 { grid-area: h; display: block; padding: 30px;}
 #image-design-3 { grid-area: t; display: block; padding: 30px;}
-#image-design-4 { grid-area: p; display: block; padding: 10px 0 0 45px;}
-#image-design-5 { grid-area: k; display: block; padding: 200px 0 0 0;}
-#image-design-5:hover { border: solid 1px black; }
+#image-design-4 { grid-area: p; display: block;}
+#image-design-5 { grid-area: k; display: block; padding: 100px 0 0 0;}
+
+#image-design-5 img {
+  width: 16%;
+  position: absolute;
+  bottom: 11.6%;
+  left: 4.4%;
+}
 
 #image-design-1 img,
 #image-design-2 img,
@@ -50,6 +56,7 @@
   display: block;
   position: absolute;
 }
+
 .snake-plant-config{
   z-index: 0;
 }
@@ -71,6 +78,10 @@
 .table-op1 { opacity: 1;}
 .shortpot-op1 { opacity: 1;}
 
+.shortpot-op1 img:first-child{
+  z-index: 5;
+}
+
 /* ----------- Side Bar ----------- */
 
 .design-divider-2 {
@@ -83,6 +94,19 @@
   align-content: space-between;
   border-radius: 20px 0px 0px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.plants-grid img {
+  width: 89%;
+}
+
+.design-divider-2 {
+  height: fit-content;
 }
 
 .design-add-plant {
@@ -109,7 +133,7 @@
 
 .design-results-title {
   text-align: center;
-  margin-top: 40px;
+  
 }
 
 .design-plant-container {
@@ -214,4 +238,22 @@ transform: scale(1.2);
   width: 70%;
   text-align: left;
   margin: 20px;
+}
+
+.table-size img {
+  width: 9.8%;
+}
+
+.pot-size img {
+  width: 11%;  
+}
+
+.hang-size img {
+  width: 11%;
+
+}
+
+.shelf-size img {
+  width: 27%;
+
 }

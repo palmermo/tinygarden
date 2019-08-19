@@ -16,10 +16,15 @@ class StaticPagesController < ApplicationController
   end
 
   def design
+    @success_url = ENV['CREATE_SUCCESS_URL']
   end
 
   def cart
-    @cart_items = current_user.cart.cart_products.map(&:to_json)
+    if current_user
+      @cart_items = current_user.cart.cart_products.map(&:to_json)
+    else
+      redirect_to root_path
+    end
   end
 
   def admin

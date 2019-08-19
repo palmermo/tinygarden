@@ -5,11 +5,12 @@ import Filter from './Filter'
 import { filters } from './utils'
 
 class Plants extends Component {
-  state = { plants: [], 
-    filters: { size: [], light: [], maintenance: [], category: [] },
+  state = { 
+    plants: [],
+    filters: { size: [], light: [], maintenance: [], category: [] }
   }
-
-  componentDidMount() {
+  
+  componentDidMount(){
     this.fetchPlants()
   }
 
@@ -39,7 +40,7 @@ class Plants extends Component {
       <div className="center-filter-items">
         <div className="checkbox-layout">
           {
-          filters.map((filter, i) => <div key={`filter-${i}`}><Filter {...filter} handleClick={this.handleFilter}/></div>)
+            filters.map((filter, i) => <div key={`filter-${i}`}><Filter {...filter} handleClick={this.handleFilter}/></div>)
           }
         </div>
         <div className="plants-list">
