@@ -32,7 +32,7 @@ class Product extends Component {
           </div>
           <div className="product-right">
             <p>{(item.price / 100).toFixed(2)}</p>
-            <button onClick={handleDeleteItem(item.id)}  type="submit">d</button>
+            <button onClick={handleDeleteItem(item.id)}  className="cart-delete" type="submit"><img src="https://img.icons8.com/ios/50/000000/waste.png"/></button>
           </div>
         </div>
       </li>

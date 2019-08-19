@@ -37,16 +37,17 @@ Product.create([
   {sku: "mon10", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Monstera').id, amount: rand(25) }
 ])
 
-Product.all.sample(5).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: 1 )}
-
 Accessory.create([
   {name: 'chair', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample },
   {name: 'table', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample },
   {name: 'hanging thing', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample }
-])
+  ])
 
 Product.create([
   {sku: "ch1", price: 4000, sellable_type: "Accessory", sellable_id: Accessory.find_by(name: 'chair').id, amount: rand(25) },
   {sku: "tab2", price: 10000, sellable_type: "Accessory", sellable_id: Accessory.find_by(name: 'table').id, amount: rand(25) },
   {sku: "thingy42", price: 3400, sellable_type: "Accessory", sellable_id: Accessory.find_by(name: 'hanging thing').id, amount: rand(25) }
-])
+  ])
+
+  
+  Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: rand(25) )}

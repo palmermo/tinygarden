@@ -11,12 +11,25 @@
   display: flex;
   justify-content: center;
   padding: 3%;
+  font-size: xx-large;
   padding-top: 7%;
   background-color: rgb(218, 239, 236);
 }
 
 #cart-header h1 {
   font-weight: 500;
+}
+
+.cart-delete {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: 29%;
+}
+
+.cart-delete img {
+  width: 37% !important;
 }
 
 /*  PRODUCTS  */
