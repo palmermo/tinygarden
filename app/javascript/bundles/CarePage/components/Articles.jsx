@@ -7,7 +7,7 @@ import React from 'react'
 const Articles = () => {
   return (
     <>
-      <article className="article">
+      <article className="animated slideInLeft slow article">
         <div className="plant-pic">
           <img src="http://tinygarden-bucket.herokuapp.com/images/article2.png" alt='article'/>
         </div>
@@ -28,7 +28,7 @@ const Articles = () => {
         </div>
         </div>
       </article>
-      <article className="article">
+      <article className="animated slideInLeft slow article">
         <div className="plant-pic">
           <img src="http://tinygarden-bucket.herokuapp.com/images/article3.png" alt='article'/>
         </div>
@@ -42,8 +42,7 @@ const Articles = () => {
               pruning which involves removing all dead and overgrown growth. 
               You can approach it with a hard pruning and cut the 
               entire plant back to 6 to 12 inches of growth 
-              (basically, starting over) or you can prune gradually over tim
-              - The Spruce.
+              (basically, starting over) or you can prune gradually over time.
             </p>
           </div>
           <div className="read-more">
@@ -51,7 +50,7 @@ const Articles = () => {
           </div>
         </div>
       </article>
-      <article className="article">
+      <article className="animated slideInLeft slow article">
         <div className="plant-pic">
         <img src='http://tinygarden-bucket.herokuapp.com/images/article2.png' alt='article 3'/>
         </div>
@@ -65,8 +64,7 @@ const Articles = () => {
                of water. Think of your plants’ natural environment:
                 is it rainy and tropical or hot and dry? These 
                 simple questions will help you gauge how 
-                much water your plant needs
-              - The sill. 
+                much water your plant needs.
           </p>
           </div>
         <div className="read-more">
@@ -74,9 +72,6 @@ const Articles = () => {
         </div>
       </div>
     </article>
-      <section className="section">
-        <p id="load-more">Load more</p>
-      </section>
     </>
   )
 }
