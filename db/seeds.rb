@@ -1,6 +1,8 @@
 Product.destroy_all
 Plant.destroy_all
 
+User.destroy_all
+
 user = User.create(
   name: "izzy", email: "izzy@email.com", password: "password", admin: true
 )
@@ -35,7 +37,7 @@ Product.create([
   {sku: "mon10", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Monstera').id, amount: rand(25) }
 ])
 
-Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.first.cart.id, product_id: p.id , amount: rand(25) )}
+Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: rand(25) )}
 
 Accessory.create([
   {name: 'Pot', description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.", variant: [0,1,2].sample, url: "http://tinygarden-bucket.herokuapp.com/images/Accessories/table.png" },
